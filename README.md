@@ -52,8 +52,20 @@ During the first week of group discussions, we finalized the game concept—to c
 
 2.Paper Prototypes
 To gain a more detailed and in-depth understanding of the game mechanics and to compare whether the two games align with our game philosophy, we created two paper prototypes during the third workshop. Based on feedback from the paper models and students' feedback after playing the games, we further compared the two game concepts (see Table 1).
+
 Flappy Bird：
-Thunder Fighter：：
+<video
+  src="https://private-user-images.githubusercontent.com/255343089/546752418-23955137-b3f7-402d-aa8d-81cac59bd9d9.mp4?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzA1NjM2MzksIm5iZiI6MTc3MDU2MzMzOSwicGF0aCI6Ii8yNTUzNDMwODkvNTQ2NzUyNDE4LTIzOTU1MTM3LWIzZjctNDAyZC1hYThkLTgxY2FjNTliZDlkOS5tcDQ_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwMjA4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDIwOFQxNTA4NTlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT03YmM3YjZjYzJmNGQ4YjRkODAyY2Q4NDM0NmIxMGE3YTgzNDk2MTg0NTE3MjlhZWUyYTNiYjA1N2ZkYmJkZjY0JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.SiFO9YgpYSM30EodSS3tWvqJzAYgIRUirMBQ4558eU4"
+  controls
+  width="400">
+</video>
+
+Thunder Fighter：
+<video
+  src="https://private-user-images.githubusercontent.com/255343089/546752403-0fb5d678-8608-49ac-8e71-79f6f376642a.mp4?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzA1NjM2MzksIm5iZiI6MTc3MDU2MzMzOSwicGF0aCI6Ii8yNTUzNDMwODkvNTQ2NzUyNDAzLTBmYjVkNjc4LTg2MDgtNDlhYy04ZTcxLTc5ZjZmMzc2NjQyYS5tcDQ_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwMjA4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDIwOFQxNTA4NTlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT01ZTk2ODc4Yjk3MDgzNGJhYWUxZTdjNzk0YjQ1NjU2YTQyNjU0YWRkOWE4ZDRjMTQ4MTI0NGRlNzg2ZThhMWJjJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.7b8l-C0nx0_ldgtqHL_tjRbRcoDlqYK6KxdTC-Zv_cY"
+  controls
+  width="400">
+</video>
 
 | Dimension | Flappy Bird | Thunder Fighter |
 |-----------|-------------|-----------------|
