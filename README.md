@@ -44,6 +44,7 @@ GROUP PHOTO. Add a group photo here.
 ### Requirements 
 
 1.Ideation process
+
 During the first week of group discussions, we finalized the game concept—to create a game that players can use to de-stress in their free time. Each person proposed one or two interesting game ideas. While deciding on the direction, we considered two main aspects. First, we wanted to learn about the key technologies of 2D games; second, we preferred to design a casual and stress-relieving gameplay mechanic. Based on the results of the first week's discussions, in the second week, our team, after brainstorming, ultimately selected the following two game concepts.
 | Game Name | Introduce |
 |----------|-----------|
@@ -51,6 +52,7 @@ During the first week of group discussions, we finalized the game concept—to c
 | Thunder Fighter | It's a vertical scrolling aerial combat shooting game. Players control a fighter jet, dodging enemy bullets, shooting down enemy planes, and collecting power-ups as the game progresses upwards. |
 
 2.Paper Prototypes
+
 To gain a more detailed and in-depth understanding of the game mechanics and to compare whether the two games align with our game philosophy, we created two paper prototypes during the third workshop. Based on feedback from the paper models and students' feedback after playing the games, we further compared the two game concepts (see Table 1).
 
 Flappy Bird：
