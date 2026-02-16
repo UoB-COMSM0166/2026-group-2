@@ -25,14 +25,18 @@ VIDEO. Include a demo video of your game here (you don't have to wait until the 
 
 ## Your Group
 
-GROUP PHOTO. Add a group photo here.
+![b5d001375e3e17623a796b1d73ceee35](https://github.com/user-attachments/assets/33c80a61-ba8a-4e25-bc17-4510dd2f40c4)
 
-- Group member 1, name, email, role
-- Group member 2, name, email, role
-- Group member 3, name, email, role
-- Group member 4, name, email, role
-- Group member 5, name, email, role
-- Group member 6, name, email, role
+## Team Members
+
+| Name | Email | Role |
+|------|--------|------|
+| Jingyang Xia | qh25729@bristol.ac.uk | UI Designer |
+| Chuanxin Zhao | sa25704@bristol.ac.uk | Programmer |
+| Haolan Hu | yn25057@bristol.ac.uk | Testing |
+| Jintong He | uq25179@bristol.ac.uk | Coordinator |
+| Yinghui Chen | en25553@bristol.ac.uk | Cross-Functional Collaborator |
+
 
 ## Project Report
 
@@ -81,7 +85,12 @@ In our discussion, we compared the two games in terms of difficulty and visual s
 
 Therefore, we hope to develop a game based on Flappy Bird's core gameplay, where players control a character through obstacles by clicking. Building upon this, we will introduce level structures and an item system, allowing the game to maintain its simple controls and fast pace while adding gameplay variations and phased goals, thereby enhancing overall playability and sustained experience.
 
+3.stakeholders
 
+The Onion Model helps us categorise stakeholders based on their proximity to the system.
+Direct users interact with the game directly, while support roles enable its development and evaluation.
+The containing system imposes technical and organisational constraints, and the wider environment reflects indirect but influential stakeholders.
+<img width="577" height="388" alt="截屏2026-02-16 14 22 49" src="https://github.com/user-attachments/assets/60d615c3-519f-45ef-83de-a3a34eceb1c1" />
 
 
 ### Design
