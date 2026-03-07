@@ -118,13 +118,44 @@ The containing system imposes technical and organisational constraints, and the 
 
 ### Evaluation
 
-- 15% ~750 words
+1.Qualitative Evaluation
 
-- One qualitative evaluation (of your choice) 
+（1）Think Aloud
 
-- One quantitative evaluation (of your choice) 
+Good experience
 
-- Description of how code was tested. 
+- The single-tap control is very intuitive, allowing players to quickly understand how to play.
+- The flying and falling animations of the character are smooth and natural.
+- Obstacles are tightly spaced and challenging, encouraging players to keep trying.
+
+Needs improvement
+
+- Some players reported that the timing of taps is difficult to master and requires multiple attempts to get used to.
+- When the game ends, there is no clear notification or feedback, making it difficult for players to understand why they failed.
+- Some players felt that the distance between obstacles in the same column is too small, making the game overly difficult.
+
+Suggested improvements:
+
+- Increase the vertical spacing between initial obstacles to make it easier for players to get started.
+
+- Provide clear descriptions or instructions for all tools and items so that players can better understand their functions.
+
+（2）Heuristic Evaluation
+
+### Heuristic Evaluation Results
+
+| Interface | Issue | Heuristic | Frequency | Impact | Persistence | Severity |
+|-----------|------|-----------|-----------|--------|-------------|----------|
+| Game Rules | The start screen lacks a clear game introduction. | Help and documentation | 3 | 2 | 1 | 2 |
+| Game Rules | There is no reward system or achievement system. | Recognition rather than recall | 3 | 2 | 2 | 2.33 |
+| Obstacle Design | Obstacles have excessive random height differences, making the game difficult. | Error prevention | 2 | 3 | 2 | 2.33 |
+| Obstacle Design | The gap between obstacles is too narrow, making the game too difficult. | Error prevention | 3 | 3 | 2 | 2.67 |
+| Game UI | The player is too far from obstacles at the start, leading to long waiting time. | Aesthetic and minimalist design | 3 | 1 | 3 | 2.33 |
+| Game UI | The score is not reset automatically after restarting the game. | Consistency and standards | 3 | 4 | 4 | 3.67 |
+| Controls | The game cannot be paused or reverted to the previous step. | User control and freedom | 2 | 2 | 2 | 2 |
+| Game Objects | Players cannot adapt to the gravity change after the potion item effect. | Visibility of system status | 1 | 3 | 1 | 1.67 |
+| Game Objects | Players cannot adapt to the transition after the invincibility item effect. | Visibility of system status | 1 | 2 | 1 | 1.33 |
+
 
 ### Process 
 
