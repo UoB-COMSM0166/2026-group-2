@@ -1,6 +1,8 @@
 # 2026-group-2
 2026 COMSM0166 group 2
 
+🚀 [Launch Game in Browser](你的网址https://uob-comsm0166.github.io/2026-group-2/）
+
 # COMSM0166 Project Template
 A project template for the Software Engineering Discipline and Practice module (COMSM0166).
 
