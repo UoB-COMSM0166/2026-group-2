@@ -93,9 +93,14 @@ Therefore, we hope to develop a game based on Flappy Bird's core gameplay, where
 The Onion Model helps us categorise stakeholders based on their proximity to the system.
 Direct users interact with the game directly, while support roles enable its development and evaluation.
 The containing system imposes technical and organisational constraints, and the wider environment reflects indirect but influential stakeholders.
+
 <img width="577" height="388" alt="截屏2026-02-16 14 22 49" src="https://github.com/user-attachments/assets/60d615c3-519f-45ef-83de-a3a34eceb1c1" />
 
-4.User stories
+4.Use Case
+
+<img width="658" height="636" alt="image" src="https://github.com/user-attachments/assets/47743372-bda2-4c0a-87cf-7f4b52f7a536" />
+
+5.User stories
 
 
 
