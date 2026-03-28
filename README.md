@@ -168,7 +168,8 @@ Suggested improvements:
 ### BlackBox Test
 | Test ID | Feature | Precondition | Step | Expected | Actual | Note |
 |---------|---------|--------------|------|----------|--------|------|
-|Launch & Entry|    |              |      |          |        |      |
+|Launch & Entry|
+|---------|---------|--------------|------|----------|--------|------|
 
 ### Process 
 
