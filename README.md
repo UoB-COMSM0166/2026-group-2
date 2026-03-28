@@ -167,8 +167,9 @@ Suggested improvements:
 
 ### BlackBox Test
 | Test ID | Feature | Precondition | Step | Expected | Actual | Note |
-|---------|------------|-------------------|-----------|--------------|-------------|---------|
+|---------|---------|--------------|------|----------|--------|------|
 |**Launch & Entry**|||||||
+| BB-01 | Lauch | Server running | Open http://localhost:3000 | Game screen loads (background, birds, music), no console errors | Pass | |
 | BB-01 | Lauch | Server running | Open http://localhost:3000 | Game screen loads (background, birds, music), no console errors | Pass | |
 
 
