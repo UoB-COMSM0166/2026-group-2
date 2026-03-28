@@ -165,6 +165,11 @@ Suggested improvements:
 | Game Objects | Players cannot adapt to the transition after the invincibility item effect. | Visibility of system status | 1 | 2 | 1 | 1.33 |
 
 
+### BlackBox Test
+| Test ID | Feature | Precondition | Step | Expected | Actual | Note |
+|---------|---------|--------------|------|----------|--------|------|
+|Launch & Entry|---------|--------------|------|----------|--------|------|
+
 ### Process 
 
 - 15% ~750 words
