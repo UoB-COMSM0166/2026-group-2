@@ -13,15 +13,19 @@ class Jellyfish {
     this.velocity = velocity;
     this.gravity = gravity;
     this.size = size;
+    this.hitboxWidth = size * 0.55;
+    this.hitboxHeight = size * 0.55;
+
     this.image = loadImage('./images/jellyfish.png');
   }
 
   draw() {
     push();
     const ratio = this.image.width / this.image.height;
-    let stretch = map(this.velocity, -10, 10, 0.8, 1.2);
+
     imageMode(CENTER);
     image(this.image, this.x, this.y, this.size * ratio, this.size);
+
     pop();
   }
 
@@ -36,6 +40,9 @@ class Jellyfish {
   }
 
   offscreen() {
-    return this.y + this.size/2 > height || this.y - this.size/2 < 0;
+    return (
+      this.y + this.hitboxHeight / 2 > height ||
+      this.y - this.hitboxHeight / 2 < 0
+    );
   }
 }
