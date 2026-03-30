@@ -12,6 +12,10 @@ let dashTimer = 0, featherTimer = 0, postDashGrace = 0;
 let bubbles = [];
 let seaweed = [];
 
+
+let pipeDistanceCounter = 0; 
+let nextPipeThreshold = 400; 
+
 let globalStats = { highScore: 0, totalPipes: 0, totalDeaths: 0, totalItems: 0, totalScore: 0 };
 let sessionStats = { itemsUsed: 0, flips: 0, gameStartTime: 0, noClickStartTime: 0, clicks: [] };
 let toast = { text: "", timer: 0 }, achievements = {}, bgImg;
@@ -88,6 +92,8 @@ function startGame(idx) {
   dashTimer = 0;
   featherTimer = 0;
   postDashGrace = 0; 
+  pipeDistanceCounter = 0; 
+  nextPipeThreshold = 400; 
   gameStarted = false;
   window.diffScale = levels[idx].speed / 3;
   sessionStats = { itemsUsed: 0, flips: 0, gameStartTime: millis(), noClickStartTime: millis(), clicks: [] };
@@ -139,11 +145,26 @@ function runGameLogic() {
 
   if (jellyfish.offscreen() && dashTimer <= 0 && postDashGrace <= 0) handleCollision(-1);
 
+ 
+  if (!DEBUG.paused) {
+    pipeDistanceCounter += speed;
+    
+    let dynamicThreshold = nextPipeThreshold;
+    if (dashTimer > 0 || postDashGrace > 0) {
+      dynamicThreshold = nextPipeThreshold * 2.5; 
+    }
 
-  if (frameCount % 80 === 0) {
-    const h = random(100, height - 300);
-    pipes.push(new Pipe({ x: width, width: 70, height: h, gap: 200 }));
-    if (random() > 0.5) items.push(new Item(width + 35, h + 100));
+    if (pipeDistanceCounter >= dynamicThreshold) {
+      const h = random(100, height - 300);
+      pipes.push(new Pipe({ x: width, width: 70, height: h, gap: 200 }));
+      
+      
+      if (random() > 0.5) items.push(new Item(width + 35, h + 100));
+      
+     
+      pipeDistanceCounter = 0;
+      nextPipeThreshold = random(350, 600); 
+    }
   }
 
   pipes.forEach((p, i) => {
