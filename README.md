@@ -98,6 +98,11 @@ The containing system imposes technical and organisational constraints, and the 
 
 4.Use Case
 
+The use case diagram for Jelly Drift provides a high-level representation of the system’s functional requirements by showing how the Player interacts with the game. The main actor in the diagram is the player, who initiates and controls most of the core game activities.
+
+The diagram shows that the player can Start Game and Play Game as the two primary interactions. The Start Game use case includes Select Game Mode and Check High Score / Hall of Fame, suggesting that these are necessary or closely related actions before entering the game. During Play Game, the player may perform or experience several extended actions, including Move Jellyfish, Use Item, Lose Game, and opening the In-Game Menu. This indicates that gameplay is the central use case, with other actions occurring as optional or condition-based extensions. In addition, the In-Game Menu includes Quit Game and Restart Game, which allow the player to manage the current game session.
+
+
 <img width="658" height="636" alt="image" src="https://github.com/user-attachments/assets/47743372-bda2-4c0a-87cf-7f4b52f7a536" />
 
 5.User stories
@@ -164,6 +169,21 @@ Suggested improvements:
 | Game Objects | Players cannot adapt to the gravity change after the potion item effect. | Visibility of system status | 1 | 3 | 1 | 1.67 |
 | Game Objects | Players cannot adapt to the transition after the invincibility item effect. | Visibility of system status | 1 | 2 | 1 | 1.33 |
 
+After summarizing all the feedback received from the qualitative assessment, we identified the following points as priorities:
+
+
+- **Difficulty balancing is not well designed**
+  - The height differences between obstacles are too random.
+  - Some players found the tap timing difficult to master.
+  - At the beginning of the game, there is a long waiting time before obstacles appear, but later the difficulty increases too quickly.
+
+- **The game lacks clear feedback**
+  - Players do not receive clear feedback when they lose.
+  - Changes caused by item effects, such as gravity changes or the end of invincibility, are not clearly shown.
+
+- **User control is limited**
+  - The game cannot be paused.
+  - Players cannot easily stop or adjust their actions during gameplay.
 
 ### BlackBox Test
 | Test ID | Feature | Precondition | Step | Expected | Actual | Note |
