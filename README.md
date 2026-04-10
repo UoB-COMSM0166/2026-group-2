@@ -96,7 +96,27 @@ The containing system imposes technical and organisational constraints, and the 
 
 <img width="577" height="388" alt="截屏2026-02-16 14 22 49" src="https://github.com/user-attachments/assets/60d615c3-519f-45ef-83de-a3a34eceb1c1" />
 
-4.Use Case
+4.Game content introduction
+
+## Game Modes
+
+| Mode | Description |
+|---|---|
+| **Normal Mode** | This is the standard game mode, designed to provide players with the core gameplay experience. Players click the left mouse button to make the jellyfish move upward briefly. The objective is to pass through obstacles safely while maintaining stable control and movement rhythm. This mode serves as the foundation for all other game modes. |
+| **Hard Mode** | Hard Mode is a more advanced version of the standard gameplay. Compared with Normal Mode, the jellyfish is affected by a stronger gravity value, causing it to fall faster and making movement control more demanding. Players must react more quickly and perform more precise clicks in order to pass through obstacles successfully. This mode is designed to increase difficulty and test the player’s control skills. |
+| **Gravity Reversal Mode** | Gravity Reversal Mode is based on the underwater setting of the game and introduces a different movement mechanic from Normal Mode. In this mode, the jellyfish naturally floats upward when no input is given, simulating buoyancy in water. By clicking the left mouse button, the player forces the jellyfish to move downward in order to pass through obstacles. This reversed control logic creates a new gameplay experience and requires players to adapt to a different movement pattern and rhythm. |
+| **Chaos Mode** | Chaos Mode combines both the normal gravity-based mechanic and the buoyancy-based mechanic. During gameplay, the control rule changes dynamically according to random indicator signs. At certain moments, the jellyfish may be affected by normal downward gravity, while at other times it may switch to upward buoyancy. Players must pay close attention to the on-screen indicators and adjust their control strategy immediately. This mode increases unpredictability, tension, and overall challenge. |
+
+## Props
+
+|Props | Description | Availability |
+|---|---|---|
+| ⭐ **Star** | The Star is a health recovery item that increases the player’s remaining lives. Each jellyfish starts with **5 lives**, and every collision with an obstacle reduces **1 life** instead of ending the game immediately. Collecting a Star restores **1 life**, improving survivability and increasing the chance of achieving a higher score. | Available and effective in all four modes |
+| **Harpoon** | The Harpoon is an item that provides both a **speed dash** and **temporary invincibility**. After activation, the jellyfish enters a rapid movement state, allowing it to pass through obstacle areas more quickly. During the dash, collisions do not reduce lives. A short extra invincibility period remains after the dash ends, giving players time to readjust their control smoothly. | Available and effective in all four modes |
+| 🫧 **Bubble** | The Bubble is a **low-gravity item** that temporarily adjusts the gravity value acting on the jellyfish. By weakening gravity, the jellyfish’s movement becomes smoother and easier to control, giving players more time to react and adjust their position. | Available and effective in all four modes |
+
+
+5.Use Case
 
 The use case diagram for Jelly Drift provides a high-level representation of the system’s functional requirements by showing how the Player interacts with the game. The main actor in the diagram is the player, who initiates and controls most of the core game activities.
 
@@ -105,7 +125,7 @@ The diagram shows that the player can Start Game and Play Game as the two primar
 
 <img width="658" height="636" alt="image" src="https://github.com/user-attachments/assets/47743372-bda2-4c0a-87cf-7f4b52f7a536" />
 
-5.User stories
+6.User stories
 
 
 
@@ -121,7 +141,14 @@ The diagram shows that the player can Start Game and Play Game as the two primar
 ### Design
 
 - 15% ~750 words 
-- System architecture. Class diagrams, behavioural diagrams. 
+- System architecture. Class diagrams, behavioural diagrams.
+
+- 1.class diagrams
+
+- As can be seen from the initial class diagram, our game adopts a centralized control structure centered around the Game Controller. This controller is responsible for managing game state, score, health, collision detection, item effects, and interactions between main game objects. The class diagram already includes core modules such as the player character Jellyfish, obstacles Pipe, items, and the achievement manager, indicating that the basic gameplay and functional framework of the game has been initially formed. However, this version of the class diagram also reveals some issues, such as the main controller's responsibilities being too centralized, different game modes not yet being independently modeled, and item functionality being relatively simple. These issues provide a clear direction for subsequent class diagram optimization and system refactoring.
+
+
+- 
 
 ### Implementation
 
