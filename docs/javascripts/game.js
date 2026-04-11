@@ -12,7 +12,6 @@ let dashTimer = 0, featherTimer = 0, postDashGrace = 0;
 let bubbles = [];
 let seaweed = [];
 
-
 let pipeDistanceCounter = 0; 
 let nextPipeThreshold = 400; 
 
@@ -42,8 +41,9 @@ function preload() {
 function setup() {
   createCanvas(windowWidth, windowHeight);
   textAlign(CENTER, CENTER);
+  let savedStats = JSON.parse(localStorage.getItem("jd_stats")) || {};
+  globalStats = Object.assign(globalStats, savedStats);
   achievements = JSON.parse(localStorage.getItem("jd_achieve")) || {};
-  globalStats = JSON.parse(localStorage.getItem("jd_stats")) || globalStats;
 
   initBackgroundEffects();
 }
@@ -74,6 +74,8 @@ function draw() {
 
   drawToast();
   drawDebugOverlay();
+  
+  if (gameState === "playing") checkAchievements();
 }
 
 function windowResized() {
@@ -145,7 +147,6 @@ function runGameLogic() {
 
   if (jellyfish.offscreen() && dashTimer <= 0 && postDashGrace <= 0) handleCollision(-1);
 
- 
   if (!DEBUG.paused) {
     pipeDistanceCounter += speed;
     
@@ -158,10 +159,8 @@ function runGameLogic() {
       const h = random(100, height - 300);
       pipes.push(new Pipe({ x: width, width: 70, height: h, gap: 200 }));
       
-      
       if (random() > 0.5) items.push(new Item(width + 35, h + 100));
       
-     
       pipeDistanceCounter = 0;
       nextPipeThreshold = random(350, 600); 
     }
@@ -351,6 +350,7 @@ function mousePressed() {
     if (mouseX > 20 && mouseX < 160 && mouseY > 70 && mouseY < 130) {
         if (!gameStarted) {
             gameStarted = true;
+            sessionStats.gameStartTime = millis(); 
         } else {
             DEBUG.paused = true;
         }
@@ -360,6 +360,14 @@ function mousePressed() {
     gameStarted = true;
     if (dashTimer <= 0) jellyfish.flap();
     sessionStats.noClickStartTime = millis();
+
+    // A19: Speed Clicker - Click 5 times in 1 second
+    const now = millis();
+    sessionStats.clicks.push(now);
+    sessionStats.clicks = sessionStats.clicks.filter(t => now - t <= 1000);
+    if (sessionStats.clicks.length >= 5 && !achievements['a19']) {
+      unlock('a19');
+    }
   } else {
     gameState = "menu";
   }
@@ -392,7 +400,7 @@ function drawStartHint() {
   pop();
 }
 
-// ================== 4. Items ==================
+// ================== 4. Items & Achievements ==================
 class Item {
   constructor(x, y) {
     this.x = x; this.y = y; this.r = 20;
@@ -416,9 +424,16 @@ class Item {
 function applyEffect(type) {
   sessionStats.itemsUsed++;
   globalStats.totalItems++;
-  if (type === 'shield') { lives++; showToast("Extra Life!"); }
+  if (type === 'shield') { 
+    // A16: Resurrection - Survive by shielding at 1 HP
+    if (lives === 1 && !achievements['a16']) unlock('a16');
+    lives++; 
+    showToast("Extra Life!"); 
+  }
   else if (type === 'dash') { dashTimer = 180; showToast("Trident Power!"); }
   else if (type === 'feather') { featherTimer = 300; showToast("Bubble Float!"); }
+  
+  checkAchievements();
 }
 
 function handleCollision(idx) {
@@ -427,24 +442,52 @@ function handleCollision(idx) {
   sounds.die.play();
   if (idx !== -1) pipes.splice(idx, 1);
   if (lives <= 0) {
+    // A9: Fast Demise - Die within 3s of starting
+    if (millis() - sessionStats.gameStartTime <= 3000 && !achievements['a9']) unlock('a9');
+    // A15: Edge Expert - Die with exactly 99 pts
+    if (score === 99 && !achievements['a15']) unlock('a15');
+
+    globalStats.totalScore += score;
     globalStats.highScore = max(globalStats.highScore, score);
     gameState = "menu";
-    saveData();
   } else {
     jellyfish.y = height / 2;
     jellyfish.velocity = 0;
     dashTimer = 0; featherTimer = 0; postDashGrace = 0; 
     showToast("Current caught you!");
   }
+  checkAchievements();
 }
 
-function saveData() {
-  localStorage.setItem("jd_stats", JSON.stringify(globalStats));
-  localStorage.setItem("jd_achieve", JSON.stringify(achievements));
+function unlock(id) {
+  achievements[id] = true;
+  const ach = achievementList.find(a => a.id === id);
+  showToast("Achievement Unlocked: " + (ach ? ach.label : id));
+  saveData();
+
+  // A20: Completionist - Unlock all other achievements 
+  if (id !== 'a20' && !achievements['a20']) {
+    let unlockedCount = achievementList.filter(a => achievements[a.id]).length;
+    if (unlockedCount >= 19) unlock('a20');
+  }
 }
 
 function checkAchievements() {
-  if (score >= 10 && !achievements['a1']) { achievements['a1'] = true; showToast("🏆 Ocean Explorer!"); saveData(); }
+  if (score >= 10 && !achievements['a1']) unlock('a1');
+  if (globalStats.totalPipes >= 100 && !achievements['a2']) unlock('a2');
+  if (globalStats.totalItems >= 20 && !achievements['a3']) unlock('a3');
+  if (globalStats.totalDeaths >= 50 && !achievements['a4']) unlock('a4');
+  if (currentLevel === 2 && score >= 20 && !achievements['a5']) unlock('a5');
+  if (sessionStats.flips >= 10 && !achievements['a6']) unlock('a6');
+  if (score >= 100 && !achievements['a7']) unlock('a7');
+  if (gameStarted && millis() - sessionStats.noClickStartTime > 5000 && !achievements['a8']) unlock('a8');
+  if (lives >= 8 && !achievements['a10']) unlock('a10');
+  if (score >= 30 && sessionStats.itemsUsed === 0 && !achievements['a11']) unlock('a11');
+  if (currentLevel === 1 && score >= 40 && !achievements['a12']) unlock('a12');
+  if (sessionStats.itemsUsed >= 10 && !achievements['a13']) unlock('a13');
+  if (currentLevel === 3 && score >= 60 && !achievements['a14']) unlock('a14');
+  if (globalStats.totalScore >= 1000 && !achievements['a17']) unlock('a17');
+  if (gameStarted && (millis() - sessionStats.gameStartTime) >= 300000 && !achievements['a18']) unlock('a18');
 }
 
 // --- Background Effects ---
@@ -568,5 +611,3 @@ function drawPausedGameFrame() {
   textSize(20); text("TAP ANYWHERE TO RESUME", width / 2, height / 2 + 60);
   pop();
 }
-
-function drawAchievementScreen() { background(10, 30, 50); fill(255); text("Achievements - Click to return", width/2, height/2); }
