@@ -157,7 +157,7 @@ class Pipe {
   }
 
   update() {
-    if (isLose) return;
+    if (gameState !== "playing") return
     this.x -= 4 * diffScale;
   }
 
