@@ -130,42 +130,69 @@ The diagram shows that the player can Start Game and Play Game as the two primar
 - 15% ~750 words 
 - System architecture. Class diagrams, behavioural diagrams.
 
-- 1.class diagrams
+1.System Architecture
 
-- As can be seen from the initial class diagram, our game adopts a centralized control structure centered around the Game Controller. This controller is responsible for managing game state, score, health, collision detection, item effects, and interactions between main game objects. The class diagram already includes core modules such as the player character Jellyfish, obstacles Pipe, items, and the achievement manager, indicating that the basic gameplay and functional framework of the game has been initially formed. However, this version of the class diagram also reveals some issues, such as the main controller's responsibilities being too centralized, different game modes not yet being independently modeled, and item functionality being relatively simple. These issues provide a clear direction for subsequent class diagram optimization and system refactoring.
+Our game is built around several main components:
+
+<ul>
+  <li><strong>GameEngine:</strong> Manages the main game loop, player input, collision handling, score system, game state changes, level progression, and item effects.</li>
+  <br>
+  <li><strong>Jellyfish:</strong> Controls the player character’s movement, position, and rendering.</li>
+  <br>
+  <li><strong>Pipe:</strong> Handles obstacle generation, movement, rendering, and collision checking.</li>
+  <br>
+  <li><strong>Item:</strong> Manages collectible objects and their gameplay effects.</li>
+  <br>
+  <li><strong>Bubble and Seaweed:</strong> Support the underwater environment design and improve visual presentation.</li>
+  <br>
+  <li><strong>AchievementManager:</strong> Tracks, unlocks, displays, and saves achievements during gameplay.</li>
+</ul>
+
+2.class diagrams
+
+As can be seen from the initial class diagram, our game adopts a centralized control structure centered around the Game Controller. This controller is responsible for managing game state, score, health, collision detection, item effects, and interactions between main game objects. The class diagram already includes core modules such as the player character Jellyfish, obstacles Pipe, items, and the achievement manager, indicating that the basic gameplay and functional framework of the game has been initially formed. However, this version of the class diagram also reveals some issues, such as the main controller's responsibilities being too centralized, different game modes not yet being independently modeled, and item functionality being relatively simple. These issues provide a clear direction for subsequent class diagram optimization and system refactoring.
 
 ![Class Diagram](images/class-diagram.png)
 - 
+
+Compared with the initial class diagram, the final version shows that our game has developed from a simple playable prototype into a more complete game system. The final design introduces richer game states, player statistics, environmental elements, and a more complete achievement system. New classes such as Seaweed and Bubble improve both the visual presentation and the thematic consistency of the game. In addition, the final class diagram better reflects our core design ideas, especially gravity changes, level progression, and item-based interactions.
+
+![Final class diagram](images/final-class-diagram.png)
+
 
 ### Implementation
 
 - 15% ~750 words
 
-- Describe implementation of your game, in particular highlighting the TWO areas of *technical challenge* in developing your game. 
+- Describe implementation of your game, in particular highlighting the TWO areas of *technical challenge* in developing your game.
+
+- To develop our game, we focused on creating a system that was easy to understand and simple to control, while still offering enough variation to keep players engaged. During the design and implementation process, we identified two main technical challenges that were central to the gameplay experience. The first challenge was gravity adjustment. Since our game includes multiple modes, we needed to implement different movement rules for each one. In Normal Mode, the character follows a standard gravity setting. In Hard Mode, the gravity is stronger, making movement more difficult to control. In Gravity Reversal Mode, the usual gravity mechanic is replaced by buoyancy, so the character naturally floats upward instead of falling downward. This required us to carefully balance movement logic and player control. 
+
+The second challenge was the item system. We designed three different items: one that restores life, one that temporarily changes gravity to make movement easier, and one that provides a short invincible dash. These items needed to appear at suitable moments and work smoothly with the different game modes. In the following section, we explain how these two technical challenges were implemented and how they shaped the final gameplay experience.
 
 ### Evaluation
 
 1.Qualitative Evaluation
 
-（1）Think Aloud(nasa)
+（1）Think Aloud
 
 Good experience
 
-- The single-tap control is very intuitive, allowing players to quickly understand how to play.
-- The flying and falling animations of the character are smooth and natural.
-- Obstacles are tightly spaced and challenging, encouraging players to keep trying.
+ - The single-tap control is very intuitive, allowing players to quickly understand how to play.
+ - The flying and falling animations of the character are smooth and natural.
+ - Obstacles are tightly spaced and challenging, encouraging players to keep trying.
 
 Needs improvement
 
-- Some players reported that the timing of taps is difficult to master and requires multiple attempts to get used to.
-- When the game ends, there is no clear notification or feedback, making it difficult for players to understand why they failed.
-- Some players felt that the distance between obstacles in the same column is too small, making the game overly difficult.
+ - Some players reported that the timing of taps is difficult to master and requires multiple attempts to get used to.
+ - When the game ends, there is no clear notification or feedback, making it difficult for players to understand why they failed.
+ - Some players felt that the distance between obstacles in the same column is too small, making the game overly difficult.
 
 Suggested improvements:
 
-- Increase the vertical spacing between initial obstacles to make it easier for players to get started.
+ - Increase the vertical spacing between initial obstacles to make it easier for players to get started.
 
-- Provide clear descriptions or instructions for all tools and items so that players can better understand their functions.
+ - Provide clear descriptions or instructions for all tools and items so that players can better understand their functions.
 
 （2）Heuristic Evaluation
 
