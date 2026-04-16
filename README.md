@@ -275,8 +275,11 @@ After summarizing all the feedback received from the qualitative assessment, we 
 |WB-01| Game Started == false | game state is playing, game started is false, jellyfish object exist | call runGameLogic | the function should return early and only jellyfish exist | Pass | | V1 |
 |WB-02| DashTimer > 0 | game state is playing, game started is true | call runGameLogic | DashTimer should decrease by 1, jellyfish velocity should reset | Pass | | V1 |
 |WB-03| featherTimer > 0 | game started is true, game is in normal mode | call runGameLogic | featherTimer should decrease by 1, gravity should be reduce to 40% | Pass | | V1 | 
+|WB-04| Offscreen jellyfish | game is playing, game started is true, game is in normal mode, Offscreen() == true | call runGameLogic | handleCollision(-1) should be triggerd, reducing lifes, recording death | Pass | | V1 |
+|WB-05| Pass pipe is in chaos mode | score is 2, game state is playing, game started is true, current mode is chaos | call runGameLogic | the score should be increased, total pipe increase, sound play, gravity should be flipped when the score multiple of 3 | Pass | | V1 |
+|WB-06| item pick up and removal | game state is playing, game started is true, one nearby dash item is vising collection dash | call runGameLogic | the item should be collected, remove from array, applyEffect() should active the dashTimer | Pass | | V1 |
 |**applyEffect**||||||||
-|WB-03| shield ||||||
+|WB-04| shield ||||||
 |WB-04| dash ||||||
 |WB-05| feather ||||||
 |WB-06|||||||
