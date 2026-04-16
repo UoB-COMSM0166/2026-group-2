@@ -247,8 +247,9 @@ After summarizing all the feedback received from the qualitative assessment, we 
 |**Scoring**||||||||
 | BB-11 | Score increase after pissing a pipe | score is visible and known | pass one pipe successfully | Score increases by exactly +1 | Fail | score not very visiable | V1 |
 | BB-11 | Score increase after pissing a pipe | score is visible and known | pass one pipe successfully | Score increases by exactly +1 | Pass |  | V2 |
-| BB-12 | Score unchange after not pissing a pipe | score is visible and known | not pass pipe | Score unchange; life decrease by exactly -1 |  |  | V1 |
-| BB-13 | Game Over |  | remain life is 0 | shown Game Over on canvas; shown score in this round |  |  |  
+| BB-12 | Score unchange after not pissing a pipe | score is visible and known | not pass pipe | Score unchange; life decrease by exactly -1 | Fail | score not very visiable | V1 |
+| BB-12 | Score unchange after not pissing a pipe | score is visible and known | not pass pipe | Score unchange; life decrease by exactly -1 | Pass |  | V2 |
+| BB-13 | Game Over |  | remain life is 0 | shown Game Over on canvas; shown score in this round | Pass |  ||  
 |**Coliision & GameOver**||||||||
 | BB-14 | Collision with upper pipe | In active play | fly into the upper pipe section | life decrease by -1; jellyfish flash indicating hit pipe or boundary and pipe stop moving; jellyfish move back to starting position and pipe restart moving (wait 3-5 seconds) |  |  | V1 |
 | BB-15 | Collision with lower pipe | In active play | fly into the lower pipe section | life decrease by -1; jellyfish flash indicating hit pipe or boundary and pipe stop moving; jellyfish move back to starting position and pipe restart moving (wait 3-5 seconds) |  |  | V1 |
