@@ -234,10 +234,11 @@ After summarizing all the feedback received from the qualitative assessment, we 
 | BB-02 | Reload behavior | game is running | refresh the page | game return to the initial state (score reset) | Fail | score does not reset | V1 |
 | BB-02 | Reload behavior | game is running | refresh the page | game return to the initial state (score reset) | Pass | score does not reset | V2 |
 |**Mode/Restart**||||||||
-| BB-03 | Normal mode on launch | page loaded | click normal mode | normal is shown with corret background, and jellyfish, and music |  |  | V1 |
+| BB-03 | Normal mode on launch | page loaded | click normal mode | normal is shown with corret background, and jellyfish, and music | Pass |  | V1 |
 | BB-04 | Return to main page | any mode is loaded | click "home" | return to main page, game screen loads | Fail | function not availble | V1 |
-| BB-05 | Normal mode play | Normal mode loaded | click to start | correct gravity assigned, wall generated, wall correctly moving towards jellyfish; background music |  |  | V1 |
-| BB-06 | Game Over | | Trigger Game Over | Game restarts; score resets |  |  | V1 |
+| BB-04 | Return to main page | any mode is loaded | click "home" | return to main page, game screen loads | Pass | function not availble | V2 |
+| BB-05 | Normal mode play | Normal mode loaded | click to start | correct gravity assigned, wall generated, wall correctly moving towards jellyfish; background music | Pass |  | V1 |
+| BB-06 | Game Over | remain chance equal to 0 | Trigger Game Over | Game restarts; score resets | Pass |  | V1 |
 |**Input Controls**||||||||
 | BB-07 | Mouse click flap | game running in active play state | click inside the game canvas once | jellyfish flaps upward immediately |  |  | V1 |
 | BB-08 | Space key flap | game running in active play state | press space onece | jellyfish flaps upward immediately |  |  | V1 |
