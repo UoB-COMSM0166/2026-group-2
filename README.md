@@ -176,8 +176,8 @@ Instead of keeping the character's movement fixed throughout the game, we design
 In particular, the reverse gravity mode applies negative gravity values and an opposite lift direction, creating a buoyancy effect that changes the way players control the character.
 From a technical perspective, this feature is implemented through parameterised level design and dynamic updates to the gravity direction at runtime.
 
-![Gravity mode 1](images/Implementation/gravity-mode-1.png)
-![Gravity mode 2](images/Implementation/gravity-mode-2.png)
+![Gravity mode 1](images/Implementation/Gravity-mode-1.png)
+![Gravity mode 2](images/Implementation/Gravity-mode-2.png)
 
 
 2.Item System Innovation
@@ -186,14 +186,15 @@ Unlike manually activated abilities, these items are randomly distributed betwee
 The three items provide different gameplay effects. The shield item increases the player’s life value, improving survivability after collisions. The dash item temporarily boosts movement speed, removes the effect of gravity, and creates a short invincible state, allowing the character to pass through obstacles safely for a limited time. The feather item reduces the influence of gravity and lift, creating a floating effect that makes character movement smoother and easier to control.
 From a design perspective, this item system increases unpredictability and moment-to-moment variation in gameplay, as players may encounter different item effects at different positions in each run. From a technical perspective, the feature is implemented through a centralised effect-handling function and timer-based status updates, allowing item effects to be triggered instantly on contact and maintained for a controlled duration during runtime.
 
-![Props 1](images/Implementation/props1.png)
-![Props 2](images/Implementation/props2.png)
+![Props 1](images/Implementation/Props1.png)
+![Props 2](images/Implementation/Props2.png)
+
 
 3.Achievement Hall Innovation
 Our third innovation is the introduction of an Achievement Hall system, which extends the game beyond simple survival and scoring by adding a collection-based progression mechanic. Instead of rewarding players only for high scores, the system recognises a wide range of play behaviours, such as passing obstacles, using items, surviving for long periods, completing mode-specific challenges, and reaching unusual gameplay conditions. This encourages players to explore different strategies and repeatedly engage with the game in order to unlock more achievements. From a design perspective, the Achievement Hall increases replayability, provides long-term goals, and gives players a clearer sense of progress. From a technical perspective, the feature is implemented through a structured achievement list and a centralised checking function, which continuously evaluates gameplay statistics and session data during runtime. This allows achievements to be unlocked automatically when specific conditions are met, creating a reward system that is both scalable and closely integrated with the core gameplay loop.
 
-![Hall of Fame 1](images/Implementation/hall-of-fame-1.jpg)
-![Hall of Fame 2](images/Implementation/hall-of-fame-2.jpg)
+![Hall of Fame 1](images/Implementation/Hall-of-Fame-1.jpg)
+![Hall of Fame 2](images/Implementation/Hall-of-Fame-2.jpg)
 
 ### Evaluation
 
