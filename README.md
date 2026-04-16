@@ -211,7 +211,7 @@ Suggested improvements:
 | Game Objects | Players cannot adapt to the transition after the invincibility item effect. | Visibility of system status | 1 | 2 | 1 | 1.33 |
 
 
-<img src="images/NASA_Plot.jpg" alt="NASA Diagram" width="400">
+<img src="images/NASA_Plot.jpg" alt="NASA Diagram" width="800">
 
 After summarizing all the feedback received from the qualitative assessment, we identified the following points as priorities:
 
