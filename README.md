@@ -279,13 +279,14 @@ After summarizing all the feedback received from the qualitative assessment, we 
 |WB-05| Pass pipe is in chaos mode | score is 2, game state is playing, game started is true, current mode is chaos | call runGameLogic | the score should be increased, total pipe increase, sound play, gravity should be flipped when the score multiple of 3 | Pass | | V1 |
 |WB-06| item pick up and removal | game state is playing, game started is true, one nearby dash item is vising collection dash | call runGameLogic | the item should be collected, remove from array, applyEffect() should active the dashTimer | Pass | | V1 |
 |**applyEffect**||||||||
-|WB-04| shield ||||||
-|WB-04| dash ||||||
-|WB-05| feather ||||||
-|WB-06|||||||
-|**handleCollision**|||||||
-|WB-07| live <= 0 ||||||
-|WB-08| live > 0 ||||||
+|WB-07| shield | player has one life remain, item counter start from 0 | call applyEffect('shield') | life counter increased by 1, item counter increase by 1, screen display "actual life", virable 16 unlock | Fail | screen not update | V1 |
+|WB-07| shield | player has one life remain, item counter start from 0 | call applyEffect('shield') | life counter increased by 1, item counter increase by 1, screen display "actual life", virable 16 unlock | Pass |  | V2 |
+|WB-08| dash | no other effects apply | call applyEffect('dash') | dashTimer should be changed 180, screen show dashTimer active | Fail | fail to diaplay dash active | V1 |
+|WB-08| dash | no other effects apply | call applyEffect('dash') | dashTimer should be changed 180, screen show dashTimer active | Pass |  | V2 |
+|WB-09| feather | no other effects active | call applyEffect('feather') | featherTime change to 300, life show lightaway | Pass | | V1 |
+|**handleCollision**||||||||
+|WB-10| live <= 0 | player is on the last life, the game is playing, the score is higher than the highest score | call handleCollision | the game should be end, high score should be updated, the game should return to the menu | Pass |  | V1|
+|WB-11| live > 0 | player has more than one life, the pipe collision happen | call handleCollision | one life should be removed, the pipe should be removed, game play should continue | Pass |  | V1 |
 
 
 
