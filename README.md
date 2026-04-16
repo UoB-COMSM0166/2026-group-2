@@ -210,6 +210,9 @@ Suggested improvements:
 | Game Objects | Players cannot adapt to the gravity change after the potion item effect. | Visibility of system status | 1 | 3 | 1 | 1.67 |
 | Game Objects | Players cannot adapt to the transition after the invincibility item effect. | Visibility of system status | 1 | 2 | 1 | 1.33 |
 
+
+![NASA Diagram](images/NASA Plot.jpg)
+
 After summarizing all the feedback received from the qualitative assessment, we identified the following points as priorities:
 
 
