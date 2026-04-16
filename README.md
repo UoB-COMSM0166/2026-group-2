@@ -269,12 +269,13 @@ After summarizing all the feedback received from the qualitative assessment, we 
 
 
 ### WhiteBox Test
-| Test ID | Feature | Precondition | Step | Expected | Actual | Note |
-|---------|---------|--------------|------|----------|--------|------|
-|**runGameLogic**|||||||
-|WB-01|||||||
-|WB-02|||||||
-|**applyEffect**|||||||
+| Test ID | Feature | Precondition | Step | Expected | Actual | Note | Version |
+|---------|---------|--------------|------|----------|--------|------|---------|
+|**runGameLogic**||||||||
+|WB-01| Game Started == false | game state is playing, game started is false, jellyfish object exist | call runGameLogic | the function should return early and only jellyfish exist | Pass | | V1 |
+|WB-02| DashTimer > 0 | game state is playing, game started is true | call runGameLogic | DashTimer should decrease by 1, jellyfish velocity should reset | Pass | | V1 |
+|WB-03| featherTimer > 0 | game started is true, game is in normal mode | call runGameLogic | featherTimer should decrease by 1, gravity should be reduce to 40% | Pass | | V1 | 
+|**applyEffect**||||||||
 |WB-03| shield ||||||
 |WB-04| dash ||||||
 |WB-05| feather ||||||
