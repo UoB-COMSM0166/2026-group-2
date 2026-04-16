@@ -230,7 +230,7 @@ After summarizing all the feedback received from the qualitative assessment, we 
 | Test ID | Feature | Precondition | Step | Expected | Actual | Note | Vesion |
 |---------|---------|--------------|------|----------|--------|------|--------|
 |**Launch & Entry**||||||||
-| BB-01 | Lauch | Server running | Open http://localhost:3000 | Game screen loads (background, birds, music), no console errors | Pass | | V1 |
+| BB-01 | Lauch | Server running | Open http://localhost:3000(run local hoster) | Game screen loads (background, birds, music), no console errors | Pass | | V1 |
 | BB-02 | Reload behavior | game is running | refresh the page | game return to the initial state (score reset) | Fail | score does not reset | V1 |
 | BB-02 | Reload behavior | game is running | refresh the page | game return to the initial state (score reset) | Pass | score does not reset | V2 |
 |**Mode/Restart**||||||||
