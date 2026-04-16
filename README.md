@@ -240,8 +240,8 @@ After summarizing all the feedback received from the qualitative assessment, we 
 | BB-05 | Normal mode play | Normal mode loaded | click to start | correct gravity assigned, wall generated, wall correctly moving towards jellyfish; background music | Pass |  | V1 |
 | BB-06 | Game Over | remain chance equal to 0 | Trigger Game Over | Game restarts; score resets | Pass |  | V1 |
 |**Input Controls**||||||||
-| BB-07 | Mouse click flap | game running in active play state | click inside the game canvas once | jellyfish flaps upward immediately |  |  | V1 |
-| BB-08 | Space key flap | game running in active play state | press space onece | jellyfish flaps upward immediately |  |  | V1 |
+| BB-07 | Mouse click flap | game running in active play state | click inside the game canvas once | jellyfish flaps upward immediately | Pass |  | V1 |
+| BB-08 | Space key flap | game running in active play state | press space onece | jellyfish flaps upward immediately | Fail | no function | V1 |
 | BB-09 | Rapid | game running in active play state | clike rapidly 10+ times | No freeze/crash; jellyfish movement remain consistent; game continues to respond |  |  | V1 |
 | BB-10 | Input ignored | game running in active play state | do nothing | Jellyfish falls |  |  | V1 |
 |**Scoring**||||||||
