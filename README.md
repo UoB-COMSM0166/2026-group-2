@@ -227,35 +227,36 @@ After summarizing all the feedback received from the qualitative assessment, we 
   - Players cannot easily stop or adjust their actions during gameplay.
 
 ### BlackBox Test
-| Test ID | Feature | Precondition | Step | Expected | Actual | Note |
-|---------|---------|--------------|------|----------|--------|------|
-|**Launch & Entry**|||||||
-| BB-01 | Lauch | Server running | Open http://localhost:3000 | Game screen loads (background, birds, music), no console errors | Pass | |
-| BB-02 | Reload behavior | game is running | refresh the page | game return to the initial state (score reset) | Fail | score does not reset |
-|**Mode/Restart**|||||||
-| BB-03 | Normal mode on launch | page loaded | click normal mode | normal is shown with corret background, and jellyfish, and music |  |  |
-| BB-04 | Return to main page | any mode is loaded |  | return to main page, game screen loads | Fail | function not availble |
-| BB-05 | Normal mode play | Normal mode loaded | click to start | correct gravity assigned, wall generated, wall correctly moving towards jellyfish; background music |  |  |
-| BB-06 | Game Over | | Trigger Game Over | Game restarts; score resets |  |  |
-|**Input Controls**|||||||
-| BB-07 | Mouse click flap | game running in active play state | click inside the game canvas once | jellyfish flaps upward immediately |  |  |
-| BB-08 | Space key flap | game running in active play state | press space onece | jellyfish flaps upward immediately |  |  |
-| BB-09 | Rapid | game running in active play state | clike rapidly 10+ times | No freeze/crash; jellyfish movement remain consistent; game continues to respond |  |  |
-| BB-10 | Input ignored | game running in active play state | do nothing | Jellyfish falls |  |  |  
-|**Scoring**|||||||
-| BB-11 | Score increase after pissing a pipe | score is visible and known | pass one pipe successfully | Score increases by exactly +1 |  |  |  
-| BB-12 | Score unchange after not pissing a pipe | score is visible and known | not pass pipe | Score unchange; life decrease by exactly -1 |  |  |  
+| Test ID | Feature | Precondition | Step | Expected | Actual | Note | Vesion |
+|---------|---------|--------------|------|----------|--------|------|--------|
+|**Launch & Entry**||||||||
+| BB-01 | Lauch | Server running | Open http://localhost:3000 | Game screen loads (background, birds, music), no console errors | Pass | | V1 |
+| BB-02 | Reload behavior | game is running | refresh the page | game return to the initial state (score reset) | Fail | score does not reset | V1 |
+| BB-02 | Reload behavior | game is running | refresh the page | game return to the initial state (score reset) | Pass | score does not reset | V2 |
+|**Mode/Restart**||||||||
+| BB-03 | Normal mode on launch | page loaded | click normal mode | normal is shown with corret background, and jellyfish, and music |  |  | V1 |
+| BB-04 | Return to main page | any mode is loaded | click "home" | return to main page, game screen loads | Fail | function not availble | V1 |
+| BB-05 | Normal mode play | Normal mode loaded | click to start | correct gravity assigned, wall generated, wall correctly moving towards jellyfish; background music |  |  | V1 |
+| BB-06 | Game Over | | Trigger Game Over | Game restarts; score resets |  |  | V1 |
+|**Input Controls**||||||||
+| BB-07 | Mouse click flap | game running in active play state | click inside the game canvas once | jellyfish flaps upward immediately |  |  | V1 |
+| BB-08 | Space key flap | game running in active play state | press space onece | jellyfish flaps upward immediately |  |  | V1 |
+| BB-09 | Rapid | game running in active play state | clike rapidly 10+ times | No freeze/crash; jellyfish movement remain consistent; game continues to respond |  |  | V1 |
+| BB-10 | Input ignored | game running in active play state | do nothing | Jellyfish falls |  |  | V1 |
+|**Scoring**||||||||
+| BB-11 | Score increase after pissing a pipe | score is visible and known | pass one pipe successfully | Score increases by exactly +1 |  |  | V1 |
+| BB-12 | Score unchange after not pissing a pipe | score is visible and known | not pass pipe | Score unchange; life decrease by exactly -1 |  |  | V1 |
 | BB-13 | Game Over |  | remain life is 0 | shown Game Over on canvas; shown score in this round |  |  |  
-|**Coliision & GameOver**|||||||
-| BB-14 | Collision with upper pipe | In active play | fly into the upper pipe section | life decrease by -1; jellyfish flash indicating hit pipe or boundary and pipe stop moving; jellyfish move back to starting position and pipe restart moving (wait 3-5 seconds) |  |  | 
-| BB-15 | Collision with lower pipe | In active play | fly into the lower pipe section | life decrease by -1; jellyfish flash indicating hit pipe or boundary and pipe stop moving; jellyfish move back to starting position and pipe restart moving (wait 3-5 seconds) |  |  | 
-| BB-16 | Collision boundary | In active play | fly into the boundary | life decrease by -1; jellyfish flash indicating hit pipe or boundary and pipe stop moving; jellyfish move back to starting position and pipe restart moving(wait 3-5 seconds) |  |  | 
-| BB-17 | Game Over Freezes Game Play | Game over triggered | Game over triggered | Shonw "Game Over" on canvas, shown score on canvas, return to main page after click |  |  | 
-|**Reset/Restart**|||||||
-| BB-18 | Restart after game over |  | remain life is 0 | shown Game Over on canvas; shown score in this round |  |  |  
-| BB-19 | Restart in active play|  | remain life is 0 | shown Game Over on canvas; shown score in this round |  |  |  
-| BB-20 | ||||||
-| BB-21 | ||||||
+|**Coliision & GameOver**||||||||
+| BB-14 | Collision with upper pipe | In active play | fly into the upper pipe section | life decrease by -1; jellyfish flash indicating hit pipe or boundary and pipe stop moving; jellyfish move back to starting position and pipe restart moving (wait 3-5 seconds) |  |  | V1 |
+| BB-15 | Collision with lower pipe | In active play | fly into the lower pipe section | life decrease by -1; jellyfish flash indicating hit pipe or boundary and pipe stop moving; jellyfish move back to starting position and pipe restart moving (wait 3-5 seconds) |  |  | V1 |
+| BB-16 | Collision boundary | In active play | fly into the boundary | life decrease by -1; jellyfish flash indicating hit pipe or boundary and pipe stop moving; jellyfish move back to starting position and pipe restart moving(wait 3-5 seconds) |  |  | V1 |
+| BB-17 | Game Over Freezes Game Play | Game over triggered | Game over triggered | Shonw "Game Over" on canvas, shown score on canvas, return to main page after click |  |  | V1 |
+|**Reset/Restart**||||||||
+| BB-18 | Restart after game over |  | remain life is 0 | shown Game Over on canvas; shown score in this round |  |  | V1 | 
+| BB-19 | Restart in active play|  | remain life is 0 | shown Game Over on canvas; shown score in this round |  |  | V1 | 
+| BB-20 | |||||||
+| BB-21 | |||||||
 
 
 ### WhiteBox Test
