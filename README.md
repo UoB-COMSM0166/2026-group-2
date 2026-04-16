@@ -263,10 +263,9 @@ After summarizing all the feedback received from the qualitative assessment, we 
 |**Reset/Restart**||||||||
 | BB-18 | Restart after game over | game open correctly | remain life is 0 | shown Game Over on canvas; shown score in this round | Fail | game over without screen notice | V1 | 
 | BB-18 | Restart after game over | game open correctly | remain life is 0 | shown Game Over on canvas; shown score in this round | Pass |  | V2 | 
-| BB-19 | Restart in active play|  | remain life is 0 | shown Game Over on canvas; shown score in this round | Fail | no this function | V1 |
-| BB-19 | Restart in active play|  | remain life is 0 | shown Game Over on canvas; shown score in this round | Pass |  | V2 |
-| BB-20 | |||||||
-| BB-21 | |||||||
+| BB-19 | Restart in active play| game open correctly | remain life is 0 | shown Game Over on canvas; shown score in this round | Fail | no this function | V1 |
+| BB-19 | Restart in active play| game open correctly | remain life is 0 | shown Game Over on canvas; shown score in this round | Pass |  | V2 |
+
 
 
 ### WhiteBox Test
