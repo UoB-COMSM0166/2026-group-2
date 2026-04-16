@@ -258,10 +258,12 @@ After summarizing all the feedback received from the qualitative assessment, we 
 | BB-16(a) | Collision boundary(up) | In active play | fly into the boundary | life decrease by -1; jellyfish flash indicating hit pipe or boundary and pipe stop moving; jellyfish move back to starting position and pipe restart moving(wait 3-5 seconds) | Pass |  | V1 |
 | BB-16(b) | Collision boundary(down) | In active play | fly into the boundary | life decrease by -1; jellyfish flash indicating hit pipe or boundary and pipe stop moving; jellyfish move back to starting position and pipe restart moving(wait 3-5 seconds) | Fail | hit the pole but didn't lose any points | V1 |
 | BB-16(b) | Collision boundary(down) | In active play | fly into the boundary | life decrease by -1; jellyfish flash indicating hit pipe or boundary and pipe stop moving; jellyfish move back to starting position and pipe restart moving(wait 3-5 seconds) | Pass |  | V2 |
-| BB-17 | Game Over Freezes Game Play | Game over triggered | Game over triggered | Shonw "Game Over" on canvas, shown score on canvas, return to main page after click |  |  | V1 |
+| BB-17 | Game Over Freezes Game Play | Game over triggered | Game over triggered | Shonw "Game Over" on canvas, shown score on canvas, return to main page after click | Fail | game over without screen notice | V1 |
+| BB-17 | Game Over Freezes Game Play | Game over triggered | Game over triggered | Shonw "Game Over" on canvas, shown score on canvas, return to main page after click | Pass |  | V2 |
 |**Reset/Restart**||||||||
-| BB-18 | Restart after game over |  | remain life is 0 | shown Game Over on canvas; shown score in this round |  |  | V1 | 
-| BB-19 | Restart in active play|  | remain life is 0 | shown Game Over on canvas; shown score in this round |  |  | V1 | 
+| BB-18 | Restart after game over |  | remain life is 0 | shown Game Over on canvas; shown score in this round | Fail | game over without screen notice | V1 | 
+| BB-18 | Restart after game over |  | remain life is 0 | shown Game Over on canvas; shown score in this round | Pass |  | V2 | 
+| BB-19 | Restart in active play|  | remain life is 0 | shown Game Over on canvas; shown score in this round | Fail |  | V1 | 
 | BB-20 | |||||||
 | BB-21 | |||||||
 
