@@ -213,6 +213,8 @@ Suggested improvements:
 
 <img src="images/NASA_Plot.jpg" alt="NASA Diagram" width="700">
 
+<img src="images/SUS.png" alt="SUS Diagram" width="700">
+
 After summarizing all the feedback received from the qualitative assessment, we identified the following points as priorities:
 
 
