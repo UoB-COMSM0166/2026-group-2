@@ -242,7 +242,7 @@ After summarizing all the feedback received from the qualitative assessment, we 
 |**Input Controls**||||||||
 | BB-07 | Mouse click flap | game running in active play state | click inside the game canvas once | jellyfish flaps upward immediately | Pass |  | V1 |
 | BB-08 | Space key flap | game running in active play state | press space onece | jellyfish flaps upward immediately | Fail | no function | V1 |
-| BB-09 | Rapid | game running in active play state | clike rapidly 10+ times | No freeze/crash; jellyfish movement remain consistent; game continues to respond |  |  | V1 |
+| BB-09 | Rapid click | game running in active play state | click rapidly 10+ times | No freeze/crash; jellyfish movement remain consistent; game continues to respond | Pass |  | V1 |
 | BB-10 | Input ignored | game running in active play state | do nothing | Jellyfish falls |  |  | V1 |
 |**Scoring**||||||||
 | BB-11 | Score increase after pissing a pipe | score is visible and known | pass one pipe successfully | Score increases by exactly +1 |  |  | V1 |
