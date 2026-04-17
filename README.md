@@ -201,9 +201,9 @@ Our third innovation is the introduction of an Achievement Hall system, which ex
 
 ### Evaluation
 
-1.Qualitative Evaluation
+**1.Qualitative Evaluation**
 
-（1）Think Aloud
+**(1) Think aloud**
 
 Good experience
 
@@ -223,7 +223,7 @@ Suggested improvements:
 
  - Provide clear descriptions or instructions for all tools and items so that players can better understand their functions.
 
-（2）Heuristic Evaluation
+**(2) Heuristic Evaluation**
 
 ### Heuristic Evaluation Results
 
@@ -259,6 +259,15 @@ Suggested improvements:
 ### SUS
 |  | 1(Strongly disagree) | 2 | 3 | 4 | 5(Strongly agree) |
 |--|----------------------|---|---|---|-------------------|
+| I think that I would like to use this system frequently |  |  | 4 | 6 |  |
+| I found the system unnecessarily complex |  | 7 | 3 |  |  |
+| I think I would need the support of a technical person to be able to use this system |  | 3 |  | 3 | 4 |
+| I found the various functions in this system were well integrated | 2 | 6 |  |  | 2 |
+| I thought there was too much inconsistency in this system |  | 5 |  | 5 |  |
+| I would imagine that most people would learn to use this system very quickly |  | 3 |  | 5 | 2 |
+| I found the system very cumbersome to use | 3 | 6 |  |  | 1 |
+| I felt very confident using the system |  |  | 2 | 8 |  |
+| I needed to learn a lot of things before I could get going with this system | 1 | 3 | 4 |  | 2 |
 
 
 <img src="images/SUS.png" alt="SUS Diagram" width="700">
