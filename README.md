@@ -194,9 +194,13 @@ Our third innovation is the introduction of an Achievement Hall system, which ex
 
 # 6.Evaluation
 
+The evaluation aimed to assess both the playability and the technical quality of JellyDrift. The evaluation is focused on four aspect: ease of learning, game playability,clarity of game feedback, and correctness of implementation. To achieve this, we combined qualitative user-based evaluation methods (NASA, SUS) with manual black-box and white-box testing. 
+
 ## Qualitative Evaluation
 
 **(1) Think aloud**
+
+We used the Think Aloud method to observe how players undetstood and interacted with the game in real time. Participants were asked to play the game while describing what they were thinking, what they found easy or difficult, and how they interpreted the feedback provided by the game.
 
 Good experience
 
