@@ -289,6 +289,40 @@ After summarizing all the feedback received from the qualitative assessment, we 
   - Players cannot easily stop or adjust their actions during gameplay.
 
 ### BlackBox Test
+<table>
+  <tr>
+    <th width="60"> Test ID </th>
+    <th width="80"> Feature </th>
+    <th width="80"> Precondition </th>
+    <th width="80"> Step </th>
+    <th width="240"> Expected </th>
+    <th width="80"> Actual </th>
+    <th width="80"> Note </th>
+    <th width="40"> Vesion </th>
+  </tr>
+  <tr>
+    <td><b>BB-01</b></td>
+    <td>Lauch</td>
+    <td>Server running</td>
+    <td>Open http://localhost:3000(run local hoster)</td>
+    <td>Game screen loads (background, birds, music), no console errors</td>
+    <td>Pass</td>
+    <td> </td>
+    <td>V1</td>
+  </tr>
+  <tr>
+    <td><b>BB-02</b></td>
+    <td>Lauch</td>
+    <td>Server running</td>
+    <td>Open http://localhost:3000(run local hoster)</td>
+    <td>Game screen loads (background, birds, music), no console errors</td>
+    <td> </td>
+    <td>Pass</td>
+    <td>V1</td>
+  </tr>  
+</table>
+
+
 | Test ID | Feature | Precondition | Step | Expected | Actual | Note | Vesion |
 |---------|---------|--------------|------|----------|--------|------|--------|
 |**Launch & Entry**||||||||
