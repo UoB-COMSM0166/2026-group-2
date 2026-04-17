@@ -226,11 +226,10 @@ Suggested improvements:
 
 **(2) Heuristic Evaluation**
 
-### Heuristic Evaluation Results
+We also carried out a heuristic evaluation to access the interface and gameplay against established usability principles. This method helped us examine the game in a more structrued way, especially in areas such as system visibility, user control, consitency, and error prevention. The heuristic evaluation is summarized in table below:
 
 | Interface | Issue | Heuristic | Frequency | Impact | Persistence | Severity |
 |-----------|------|-----------|-----------|--------|-------------|----------|
-| Game Rules | The start screen lacks a clear game introduction. | Help and documentation | 3 | 2 | 1 | 2 |
 | Game Rules | There is no reward system or achievement system. | Recognition rather than recall | 3 | 2 | 2 | 2.33 |
 | Obstacle Design | Obstacles have excessive random height differences, making the game difficult. | Error prevention | 2 | 3 | 2 | 2.33 |
 | Obstacle Design | The gap between obstacles is too narrow, making the game too difficult. | Error prevention | 3 | 3 | 2 | 2.67 |
@@ -409,6 +408,13 @@ After summarizing all the feedback received from the qualitative assessment, we 
 ### Contribution Statement
 
 - Provide a table of everyone's contribution, which *may* be used to weight individual grades. We expect that the contribution will be split evenly across team-members in most cases. Please let us know as soon as possible if there are any issues with teamwork as soon as they are apparent and we will do our best to help your team work harmoniously together.
+
+
+# Appendices
+
+
+
+
 
 ### Additional Marks
 
