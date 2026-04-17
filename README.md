@@ -240,7 +240,26 @@ Suggested improvements:
 | Game Objects | Players cannot adapt to the transition after the invincibility item effect. | Visibility of system status | 1 | 2 | 1 | 1.33 |
 
 
+### NASA-TLX
+|  | 1(Strongly disagree) | 2 | 3 | 4 | 5(Strongly agree) |
+|--|----------------------|---|---|---|-------------------|
+| Mantal Demand (When staring at the screen for a long time, one needs to concentrate) | 2 | 3 |  | 4 | 1 |
+| Physical Demand (Feeling hand fatigue) |  | 6 | 4 |  |  |
+| Temporal Demand (The pace is fast) |  | 5 | 4 |   | 1 |
+| Performance Satisfaction (Do you think you played the game well?) |  | 6 |  | 4 |  |
+| Effort (How much effort did it take to achieve such results?) |  | 3 | 2 |  | 5 |
+| Frustration (Experiencing frustration) | 2 | 5 |  |  | 3 |
+
+
+
 <img src="images/NASA_Plot.jpg" alt="NASA Diagram" width="700">
+
+
+
+### SUS
+|  | 1(Strongly disagree) | 2 | 3 | 4 | 5(Strongly agree) |
+|--|----------------------|---|---|---|-------------------|
+
 
 <img src="images/SUS.png" alt="SUS Diagram" width="700">
 
