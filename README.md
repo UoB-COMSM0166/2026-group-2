@@ -26,7 +26,7 @@ LINK. Add a link here to your deployed game, you can also make the image above l
 
 VIDEO. Include a demo video of your game here (you don't have to wait until the end, you can insert a work in progress video)
 
-## Your Group
+## Our Team
 
 ![b5d001375e3e17623a796b1d73ceee35](https://github.com/user-attachments/assets/33c80a61-ba8a-4e25-bc17-4510dd2f40c4)
 
@@ -199,7 +199,7 @@ Our third innovation is the introduction of an Achievement Hall system, which ex
 ![Hall of Fame 1](images/Implementation/Hall-of-Fame-1.jpg)
 ![Hall of Fame 2](images/Implementation/Hall-of-Fame-2.jpg)
 
-### Evaluation
+## Evaluation
 
 **1.Qualitative Evaluation**
 
