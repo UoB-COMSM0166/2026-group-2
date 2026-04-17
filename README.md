@@ -81,6 +81,10 @@ During the first week of group discussions, we finalized the game concept—to c
 To gain a more detailed and in-depth understanding of the game mechanics and to compare whether the two games align with our game philosophy, we created two paper prototypes during the third workshop. Based on feedback from the paper models and students' feedback after playing the games, we further compared the two game concepts (see Table 1).
 
 Flappy Bird：
+
+![demo](images/demonstration-2.gif)
+
+
 <video
   src="https://private-user-images.githubusercontent.com/255343089/546752418-23955137-b3f7-402d-aa8d-81cac59bd9d9.mp4?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzA1NjM2MzksIm5iZiI6MTc3MDU2MzMzOSwicGF0aCI6Ii8yNTUzNDMwODkvNTQ2NzUyNDE4LTIzOTU1MTM3LWIzZjctNDAyZC1hYThkLTgxY2FjNTliZDlkOS5tcDQ_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwMjA4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDIwOFQxNTA4NTlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT03YmM3YjZjYzJmNGQ4YjRkODAyY2Q4NDM0NmIxMGE3YTgzNDk2MTg0NTE3MjlhZWUyYTNiYjA1N2ZkYmJkZjY0JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.SiFO9YgpYSM30EodSS3tWvqJzAYgIRUirMBQ4558eU4"
   controls
