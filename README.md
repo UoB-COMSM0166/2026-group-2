@@ -82,7 +82,7 @@ To gain a more detailed and in-depth understanding of the game mechanics and to 
 
 Flappy Bird：
 
-![demo](images/demonstration-2.gif)
+![demo](images/FlappyBird-demo.gif)
 
 
 <video
