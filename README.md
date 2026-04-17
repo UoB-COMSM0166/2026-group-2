@@ -27,7 +27,9 @@ LINK. Add a link here to your deployed game, you can also make the image above l
 VIDEO. Include a demo video of your game here (you don't have to wait until the end, you can insert a work in progress video)
 
 ## Video Demostration
+
 we are family
+
 <p align="center">
   <img src="images/demostration-2.gif" width="700">
 </p>
