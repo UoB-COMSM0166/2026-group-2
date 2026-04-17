@@ -232,45 +232,50 @@ We also carried out a heuristic evaluation to access the interface and gameplay 
 |-----------|------|-----------|-----------|--------|-------------|----------|
 | Game Rules | There is no reward system or achievement system. | Recognition rather than recall | 3 | 2 | 2 | 2.33 |
 | Obstacle Design | Obstacles have excessive random height differences, making the game difficult. | Error prevention | 2 | 3 | 2 | 2.33 |
-| Obstacle Design | The gap between obstacles is too narrow, making the game too difficult. | Error prevention | 3 | 3 | 2 | 2.67 |
 | Game UI | The player is too far from obstacles at the start, leading to long waiting time. | Aesthetic and minimalist design | 3 | 1 | 3 | 2.33 |
-| Game UI | The score is not reset automatically after restarting the game. | Consistency and standards | 3 | 4 | 4 | 3.67 |
 | Controls | The game cannot be paused or reverted to the previous step. | User control and freedom | 2 | 2 | 2 | 2 |
 | Game Objects | Players cannot adapt to the gravity change after the potion item effect. | Visibility of system status | 1 | 3 | 1 | 1.67 |
-| Game Objects | Players cannot adapt to the transition after the invincibility item effect. | Visibility of system status | 1 | 2 | 1 | 1.33 |
 
 
-### NASA-TLX
-|  | 1(Strongly disagree) | 2 | 3 | 4 | 5(Strongly agree) |
-|--|----------------------|---|---|---|-------------------|
-| Mantal Demand (When staring at the screen for a long time, one needs to concentrate) | 2 | 3 |  | 4 | 1 |
-| Physical Demand (Feeling hand fatigue) |  | 6 | 4 |  |  |
-| Temporal Demand (The pace is fast) |  | 5 | 4 |   | 1 |
-| Performance Satisfaction (Do you think you played the game well?) |  | 6 |  | 4 |  |
-| Effort (How much effort did it take to achieve such results?) |  | 3 | 2 |  | 5 |
-| Frustration (Experiencing frustration) | 2 | 5 |  |  | 3 |
+The heuristic evaluation confirmed several issues already identified during the Think Alound study. The most significant problems were related to **visibility of game status**, and **User control**. In particular, the obstacle gaps were sometimes too narrow and the variation in obstacle height could feel too abrupt.
+
+
+
+
+## Questionnaire-Based Evaluation
+
+
+**(1) NASA-TLX**
+
+We also used the NASA questionnaire to exaine the perceived workload of the game, which was important because one of the original goals of *Jelly Drift* was to create a causal and stress-relieving experience. Thus, players' mental demand while playing the game is a important criterion. 
+
 
 
 
 <img src="images/NASA_Plot.jpg" alt="NASA Diagram" width="700">
 
 
+**(2) SUS**
 
-### SUS
-|  | 1(Strongly disagree) | 2 | 3 | 4 | 5(Strongly agree) |
-|--|----------------------|---|---|---|-------------------|
-| I think that I would like to use this system frequently |  |  | 4 | 6 |  |
-| I found the system unnecessarily complex |  | 7 | 3 |  |  |
-| I think I would need the support of a technical person to be able to use this system |  | 3 |  | 3 | 4 |
-| I found the various functions in this system were well integrated | 2 | 6 |  |  | 2 |
-| I thought there was too much inconsistency in this system |  | 5 |  | 5 |  |
-| I would imagine that most people would learn to use this system very quickly |  | 3 |  | 5 | 2 |
-| I found the system very cumbersome to use | 3 | 6 |  |  | 1 |
-| I felt very confident using the system |  |  | 2 | 8 |  |
-| I needed to learn a lot of things before I could get going with this system | 1 | 3 | 4 |  | 2 |
+We also used the SUS to gain a broader measure of preceived usability. The SUS results below suggest that *Jelly Drift* is generally usable and approachable for players. Items related to confidence, williness to continue playing the game, and perceived easy of learning received relatively high scores, indicating that the core gameplay logic is easy to understand and interacti with. This is consistent with the design goal of the game that providing a simple, casual, and accessible experience. 
+
+However, the error bars also show noticeable variation in some responses, suggesting that not all players experienced the game in the same way. In particular, aspects such as feature integration, consistency, and the clarity of learning requiements still need refinement.
+
 
 
 <img src="images/SUS.png" alt="SUS Diagram" width="700">
+
+In the figure, items 1-9 correspond to the following statement:
+
+1. I think that I would like to use this system frequently.
+2. I found the system unnecessarily complex
+3. I think I would need the support of a technical person to be able to use this system
+4. I found the various functions in this system were well integrated
+5. I thought there was too much inconsistency in this system
+6. I would imagine that most people would learn to use this system very quickly
+7. I found the system very cumbersome to use
+8. I felt very confident using the system
+9. I needed to learn a lot of things before I could get going with this system
 
 After summarizing all the feedback received from the qualitative assessment, we identified the following points as priorities:
 
@@ -287,6 +292,32 @@ After summarizing all the feedback received from the qualitative assessment, we 
 - **User control is limited**
   - The game cannot be paused.
   - Players cannot easily stop or adjust their actions during gameplay.
+ 
+
+
+
+
+## Functional Testing
+**(1) BlackBox Testing**
+
+Black-box testing was used to verify the game from the player's perspective, without replying on internal code knowledge. The test cases here covered launching the game, selecting modes, controlling the jellyfish, passing obstacles, collecting items, colliding with pipes and boundaries, triggering game-over states, and restarting or returning to the menu.
+
+This testing process was particularly useful in identifying player-visible defects between early and later version of the game. In version 1, several issues were found, including unclear game-over feadback, missing or incomplete home/restart functionality, visibility problem in score display, and inconsistent collision detection in some situation. After these issues were identified, changes were made and retested in Version 2. Many of the corresponding tests then passed, showing that the game had become more stable and more understandable to players.
+
+
+
+<p>
+    <img src="images/v1-demo.gif" width="45%" />
+    <img src="images/v2-demo.gif" width="45%" />
+</p>
+
+
+**(2) White-Box Testing**
+
+White-box testing focuses on the internal logic of the most important gameplay functions. In particular, we examined the behavior of the main game loop, item activation, and collision handling. The main functions considered in this stage included the logic for active play progression, applying item effects, and handling collisions. These tests helpd verify that dash and feather effects updated correctly over time, that collision produced the correct life and state changes, and that scoring logic behavied as expected under different conditions. These was especially valuable in game like *Jelly Drift*, where many features interact in real time and where some bugs may not be easy to isolate through gameplay observation alons.
+
+
+
 
 ### BlackBox Test
 <table>
