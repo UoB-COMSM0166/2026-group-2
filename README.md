@@ -28,6 +28,9 @@ VIDEO. Include a demo video of your game here (you don't have to wait until the 
 
 # Video Demostration
 
+<p align="center">
+  <img src="images/demostration-2.gif" width="700">
+</p>
 
 # Table of Content
 
