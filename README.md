@@ -301,14 +301,7 @@ After summarizing all the feedback received from the qualitative assessment, we 
     <th width="40"> Vesion </th>
   </tr>
   <tr>
-    <td><b>Launch & Entry</b></td>
-    <td> </td>
-    <td> </td>
-    <td> </td>
-    <td> </td>
-    <td> </td>
-    <td> </td>
-    <td> </td>
+    <td colspan="8"><b>Launch & Entry</b></td>
   </tr>
   <tr>
     <td><b>BB-01</b></td>
