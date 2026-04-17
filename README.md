@@ -37,7 +37,6 @@ VIDEO. Include a demo video of your game here (you don't have to wait until the 
 # 1.Our Team
 
 <img src="images/Team-Member.jpg" width="600">
-![b5d001375e3e17623a796b1d73ceee35](https://github.com/user-attachments/assets/33c80a61-ba8a-4e25-bc17-4510dd2f40c4)
 
 
 | Name | Email | Role |
