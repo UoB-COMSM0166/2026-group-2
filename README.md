@@ -116,15 +116,6 @@ The diagram shows that the player can Start Game and Play Game as the two primar
 | Developers | Maintainable game architecture | As a developer, I want the game logic to be organised and well-structured so that the system is easier to maintain and extend. | Given that the codebase is structured into modules, when new features are added, then changes can be made without affecting unrelat
 
 
-| Stakeholder | Epic | User Story | Acceptance Criteria |
-|-------------|------|------------|---------------------|
-| Casual Players | Smooth and engaging gameplay experience | As a casual player, I want responsive single-tap controls so that the character reacts immediately and the gameplay feels satisfying. | Given that the game is running, when I tap the screen, then the character should instantly move upward with a consistent response time. |
-| Casual Players | Motivating scoring system | As a casual player, I want to see my score increase when I pass obstacles so that I feel motivated to keep playing and improve my performance. | Given that the character passes an obstacle, when the obstacle is cleared, then the score should increase by one and be displayed on the screen. |
-| New Players | Intuitive onboarding experience | As a new player, I want to quickly understand how the game works so that I can start playing without confusion. | Given that I open the game for the first time, when the game loads, then simple instructions such as **"Tap to Fly"** should be displayed. |
-| New Players | Clear and simple game interface | As a new player, I want a simple and clear interface so that I can easily understand gameplay elements and controls. | Given that the game interface is displayed, when I view the main screen, then the character, obstacles, and score indicator should be clearly visible. |
-| Developers | Maintainable game architecture | As a developer, I want the game logic to be modular and well-structured so that the system is easier to maintain and extend. | Given that the codebase is structured into modules, when new features are added, then changes can be made without affecting unrelated components. |
-| Testers | Clear and testable gameplay behaviour | As a tester, I want clear gameplay rules so that I can verify whether the system behaves as expected during testing. | Given that the character collides with an obstacle, when the collision is detected, then the game should trigger the **Game Over** state immediately. |
-| Competitor Game Developers | Competitive differentiation in gameplay design | As a competitor game developer, I want to analyse the gameplay mechanics of this game so that I can understand how it attracts players and improve my own game design. | Given that I observe the gameplay mechanics, when I compare the control system and obstacle design with similar games, then I should be able to identify the unique gameplay characteristics. |
 
 
 # 4.Design
