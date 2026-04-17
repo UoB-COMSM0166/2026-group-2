@@ -108,6 +108,16 @@ The diagram shows that the player can Start Game and Play Game as the two primar
 
 | Stakeholder | Epic | User Story | Acceptance Criteria |
 |-------------|------|------------|---------------------|
+| Casual Players | Smooth and satisfying controls | As a casual player, I want the jellyfish to flap upward whenever I click, so that I feel in control. | Given that the game is running, when I tap the screen, then the jellyfish should instantly move upward with a consistent response time. |
+| Casual Players | Clear scoring system | As a casual player, I want my score increase when I pass obstacles so that I feel motivated to keep playing and improve my performance. | Given that the jellyfish passes an obstacle, when the obstacle is cleared, then the score should increase by one and be displayed on the screen. |
+| New Players | Intuitive onboarding experience | As a new player, I want clear instructions on how to start and control the game, so that I can start playing without confusion. | Given that I open the game for the first time, when the game loads, then simple instructions such as **"Tap to Fly"** should be displayed. |
+| New Players | Clear and simple game interface | As a new player, I want a simple and clear interface so that I can easily understand gameplay elements and controls. | Given that the game interface is displayed, when I view the main screen, then the character, obstacles, and score indicator should be clearly visible. |
+| Returning Player | Replayability through game modes | As a returning player, I want different game modes with different movment rules and difficulty setting, so that replaying the game feels fresh and challenging. | Given that I select a specific game mode from the menu, the corresponding gravity, speed, and sepcial rules for that mode should be applied. |
+| Developers | Maintainable game architecture | As a developer, I want the game logic to be organised and well-structured so that the system is easier to maintain and extend. | Given that the codebase is structured into modules, when new features are added, then changes can be made without affecting unrelat
+
+
+| Stakeholder | Epic | User Story | Acceptance Criteria |
+|-------------|------|------------|---------------------|
 | Casual Players | Smooth and engaging gameplay experience | As a casual player, I want responsive single-tap controls so that the character reacts immediately and the gameplay feels satisfying. | Given that the game is running, when I tap the screen, then the character should instantly move upward with a consistent response time. |
 | Casual Players | Motivating scoring system | As a casual player, I want to see my score increase when I pass obstacles so that I feel motivated to keep playing and improve my performance. | Given that the character passes an obstacle, when the obstacle is cleared, then the score should increase by one and be displayed on the screen. |
 | New Players | Intuitive onboarding experience | As a new player, I want to quickly understand how the game works so that I can start playing without confusion. | Given that I open the game for the first time, when the game loads, then simple instructions such as **"Tap to Fly"** should be displayed. |
