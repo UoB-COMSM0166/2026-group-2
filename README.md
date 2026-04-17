@@ -30,6 +30,9 @@ VIDEO. Include a demo video of your game here (you don't have to wait until the 
 
 we are family
 
+![demo](images/demonstration-2.gif)
+
+
 <p align="center">
   <img src="images/demostration-2.gif" width="700">
 </p>
