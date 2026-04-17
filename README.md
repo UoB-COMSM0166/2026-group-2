@@ -220,6 +220,10 @@ Suggested improvements:
 
  - Provide clear descriptions or instructions for all tools and items so that players can better understand their functions.
 
+
+<img src="images/menu_compare.png" alt="menu Diagram" width="600">
+<img src="images/Play_ready.png" alt="Play Diagram" width="600">
+
 **(2) Heuristic Evaluation**
 
 ### Heuristic Evaluation Results
