@@ -239,6 +239,22 @@ We also carried out a heuristic evaluation to access the interface and gameplay 
 
 The heuristic evaluation confirmed several issues already identified during the Think Alound study. The most significant problems were related to **visibility of game status**, and **User control**. In particular, the obstacle gaps were sometimes too narrow and the variation in obstacle height could feel too abrupt.
 
+After summarizing all the feedback received from the qualitative assessment, we identified the following points as priorities:
+
+
+- **Difficulty balancing is not well designed**
+  - The height differences between obstacles are too random.
+  - Some players found the tap timing difficult to master.
+  - At the beginning of the game, there is a long waiting time before obstacles appear, but later the difficulty increases too quickly.
+
+- **The game lacks clear feedback**
+  - Players do not receive clear feedback when they lose.
+  - Changes caused by item effects, such as gravity changes or the end of invincibility, are not clearly shown.
+
+- **User control is limited**
+  - The game cannot be paused.
+  - Players cannot easily stop or adjust their actions during gameplay.
+
 
 
 
@@ -276,23 +292,6 @@ In the figure, items 1-9 correspond to the following statement:
 7. I found the system very cumbersome to use
 8. I felt very confident using the system
 9. I needed to learn a lot of things before I could get going with this system
-
-After summarizing all the feedback received from the qualitative assessment, we identified the following points as priorities:
-
-
-- **Difficulty balancing is not well designed**
-  - The height differences between obstacles are too random.
-  - Some players found the tap timing difficult to master.
-  - At the beginning of the game, there is a long waiting time before obstacles appear, but later the difficulty increases too quickly.
-
-- **The game lacks clear feedback**
-  - Players do not receive clear feedback when they lose.
-  - Changes caused by item effects, such as gravity changes or the end of invincibility, are not clearly shown.
-
-- **User control is limited**
-  - The game cannot be paused.
-  - Players cannot easily stop or adjust their actions during gameplay.
- 
 
 
 
