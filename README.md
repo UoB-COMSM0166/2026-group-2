@@ -1,5 +1,8 @@
 # 2026-group-2
 2026 COMSM0166 group 2
+<img src="images/Team-Member.jpg" width="600">
+
+
 
 🚀 [Launch Game: Click here to play Jellydrift](https://uob-comsm0166.github.io/2026-group-2/)
 
