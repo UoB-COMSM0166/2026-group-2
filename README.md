@@ -1,6 +1,7 @@
-# 2026-group-2
-2026 COMSM0166 group 2
-<img src="images/Team-Member.jpg" width="600">
+<img src="images/Poster.jpg" width="600">
+
+
+
 
 
 
@@ -321,42 +322,7 @@ White-box testing focuses on the internal logic of the most important gameplay f
 
 
 
-### BlackBox Test
-<table>
-  <tr>
-    <th width="60"> Test ID </th>
-    <th width="80"> Feature </th>
-    <th width="80"> Precondition </th>
-    <th width="80"> Step </th>
-    <th width="240"> Expected </th>
-    <th width="80"> Actual </th>
-    <th width="80"> Note </th>
-    <th width="40"> Vesion </th>
-  </tr>
-  <tr>
-    <td colspan="8"><b>Launch & Entry</b></td>
-  </tr>
-  <tr>
-    <td><b>BB-01</b></td>
-    <td>Lauch</td>
-    <td>Server running</td>
-    <td>Open http://localhost:3000(run local hoster)</td>
-    <td>Game screen loads (background, birds, music), no console errors</td>
-    <td>Pass</td>
-    <td> </td>
-    <td>V1</td>
-  </tr>
-  <tr>
-    <td><b>BB-02</b></td>
-    <td>Lauch</td>
-    <td>Server running</td>
-    <td>Open http://localhost:3000(run local hoster)</td>
-    <td>Game screen loads (background, birds, music), no console errors</td>
-    <td> </td>
-    <td>Pass</td>
-    <td>V1</td>
-  </tr>  
-</table>
+
 
 
 | Test ID | Feature | Precondition | Step | Expected | Actual | Note | Vesion |
@@ -462,23 +428,65 @@ The project follows standard web development workflows to maintain consistent pe
 
 - Reflect on the project as a whole. Lessons learnt. Reflect on challenges. Future work, describe both immediate next steps for your current game and also what you would potentially do if you had chance to develop a sequel.
 
-# 10.Contribution Statement
+
+## Contribution Statement
 
 - Provide a table of everyone's contribution, which *may* be used to weight individual grades. We expect that the contribution will be split evenly across team-members in most cases. Please let us know as soon as possible if there are any issues with teamwork as soon as they are apparent and we will do our best to help your team work harmoniously together.
+
+
+
+
+
+
+# 10.AI Statement
+(~250 words)
+
+
+
+
+
 
 
 # Appendices
 
 
+### BlackBox Test
+<table>
+  <tr>
+    <th width="60"> Test ID </th>
+    <th width="80"> Feature </th>
+    <th width="80"> Precondition </th>
+    <th width="80"> Step </th>
+    <th width="240"> Expected </th>
+    <th width="80"> Actual </th>
+    <th width="80"> Note </th>
+    <th width="40"> Vesion </th>
+  </tr>
+  <tr>
+    <td colspan="8"><b>Launch & Entry</b></td>
+  </tr>
+  <tr>
+    <td><b>BB-01</b></td>
+    <td>Lauch</td>
+    <td>Server running</td>
+    <td>Open http://localhost:3000(run local hoster)</td>
+    <td>Game screen loads (background, birds, music), no console errors</td>
+    <td>Pass</td>
+    <td> </td>
+    <td>V1</td>
+  </tr>
+  <tr>
+    <td><b>BB-02</b></td>
+    <td>Lauch</td>
+    <td>Server running</td>
+    <td>Open http://localhost:3000(run local hoster)</td>
+    <td>Game screen loads (background, birds, music), no console errors</td>
+    <td> </td>
+    <td>Pass</td>
+    <td>V1</td>
+  </tr>  
+</table>
 
 
 
-### Additional Marks
 
-You can delete this section in your own repo, it's just here for information. in addition to the marks above, we will be marking you on the following two points:
-
-- **Quality** of report writing, presentation, use of figures and visual material (5% of report grade) 
-  - Please write in a clear concise manner suitable for an interested layperson. Write as if this repo was publicly available.
-- **Documentation** of code (5% of report grade)
-  - Organise your code so that it could easily be picked up by another team in the future and developed further.
-  - Is your repo clearly organised? Is code well commented throughout?
