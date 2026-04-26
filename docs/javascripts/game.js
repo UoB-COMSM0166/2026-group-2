@@ -7,6 +7,9 @@ const levels = [
 ];
 
 let gameState = "menu", currentLevel = 0, score = 0, lives = 5;
+//Add a variable to store the final score
+let currentSpeed = 0;
+let finalScore = 0;
 let jellyfish, pipes = [], items = [], gravityDir = 1, gameStarted = false;
 let dashTimer = 0, featherTimer = 0, postDashGrace = 0; 
 let bubbles = [];
@@ -70,6 +73,7 @@ function draw() {
         drawControlPanel();
     }
     else if (gameState === "achievements") drawAchievementScreen();
+    else if (gameState === "gameover") drawGameOverScreen();
   }
 
   drawToast();
@@ -113,6 +117,15 @@ function runGameLogic() {
 
   const cfg = levels[currentLevel];
   let speed = 4 * window.diffScale;
+  let difficultyBonus = 0;
+
+  if (score > 10) {
+    difficultyBonus = (score - 10) * 0.04;
+  }
+
+  speed += difficultyBonus;
+  currentSpeed = speed;
+  
   let g = cfg.gravity * gravityDir;
   let l = cfg.lift * gravityDir;
 
@@ -250,7 +263,7 @@ function drawMenu() {
   textAlign(LEFT, CENTER);
   textSize(22); stroke(0); strokeWeight(2); fill(255);
   const itemDescs = [
-    { icon: "⭐", desc: "Extra life" },
+    { icon: "❤️", desc: "Extra life" },
     { icon: "🔱", desc: "Speed dash" },
     { icon: "🫧", desc: "Low gravity" }
   ];
@@ -327,6 +340,10 @@ function drawGravityIndicator() {
 }
 
 function mousePressed() {
+  if (gameState === "gameover") {
+    gameState = "menu";
+    return;
+  }
   if (gameState === "menu") {
     levels.forEach((l, i) => {
       if (mouseY > height * 0.28 + i * 85 && mouseY < height * 0.28 + i * 85 + 55) startGame(i);
@@ -400,22 +417,55 @@ function drawStartHint() {
   pop();
 }
 
+function drawGameOverScreen() {
+  push();
+
+  // Dark overlay
+  fill(0, 180);
+  rect(0, 0, width, height);
+
+  textAlign(CENTER, CENTER);
+
+  // Title
+  textSize(64);
+  stroke(0);
+  strokeWeight(6);
+  fill(255, 80, 80);
+  text("GAME OVER", width / 2, height * 0.32);
+
+  // Score box
+  noStroke();
+  fill(255, 230);
+  rect(width / 2 - 180, height * 0.42, 360, 150, 20);
+
+  fill(44, 62, 80);
+  textSize(28);
+  text(`Score: ${finalScore}`, width / 2, height * 0.48);
+  text(`High Score: ${globalStats.highScore}`, width / 2, height * 0.55);
+
+  // Hint
+  textSize(20);
+  fill(255);
+  text("Click anywhere to return to menu", width / 2, height * 0.72);
+
+  pop();
+}
 // ================== 4. Items & Achievements ==================
 class Item {
   constructor(x, y) {
     this.x = x; this.y = y; this.r = 20;
     const r = random();
-    this.type = r < 0.4 ? 'shield' : (r < 0.7 ? 'dash' : 'feather');
+    this.type = r < 0.4 ? 'heart' : (r < 0.7 ? 'dash' : 'feather');
   }
   draw() {
     push();
     strokeWeight(2); stroke(255);
-    if (this.type === 'shield') fill(255, 127, 80); 
+    if (this.type === 'heart') fill(255, 127, 80); 
     else if (this.type === 'dash') fill(0, 191, 255); 
     else fill(224, 255, 255); 
     ellipse(this.x, this.y, this.r * 2.5); 
     fill(255); textSize(24);
-    let icon = this.type === 'shield' ? "⭐" : (this.type === 'dash' ? "🔱" : "🫧");
+    let icon = this.type === 'heart' ? "❤️" : (this.type === 'dash' ? "🔱" : "🫧");
     text(icon, this.x, this.y);
     pop();
   }
@@ -424,8 +474,8 @@ class Item {
 function applyEffect(type) {
   sessionStats.itemsUsed++;
   globalStats.totalItems++;
-  if (type === 'shield') { 
-    // A16: Resurrection - Survive by shielding at 1 HP
+  if (type === 'heart') { 
+    // A16: Resurrection - Survive by shielding at 1 HP（没有这个功能了）
     if (lives === 1 && !achievements['a16']) unlock('a16');
     lives++; 
     showToast("Extra Life!"); 
@@ -447,9 +497,13 @@ function handleCollision(idx) {
     // A15: Edge Expert - Die with exactly 99 pts
     if (score === 99 && !achievements['a15']) unlock('a15');
 
+    finalScore = score;
+
     globalStats.totalScore += score;
     globalStats.highScore = max(globalStats.highScore, score);
-    gameState = "menu";
+    saveData();
+
+    gameState = "gameover";
   } else {
     jellyfish.y = height / 2;
     jellyfish.velocity = 0;
@@ -563,6 +617,7 @@ function drawDebugOverlay() {
     `FPS: ${nf(frameRate(), 2, 1)}`,
     `Score: ${score}`,
     `Lives: ${lives}`,
+    `Speed: ${currentSpeed.toFixed(2)}`,
     `Pipes: ${pipes.length}`,
     `Items: ${items.length}`,
     jellyfish ? `Jelly X/Y: ${jellyfish.x.toFixed(1)}, ${jellyfish.y.toFixed(1)}` : "Jelly X/Y: -",
@@ -578,7 +633,7 @@ function drawJellyfishHitbox() {
   if (!jellyfish) return;
   push();
   rectMode(CENTER); noFill(); stroke(255, 60, 60); strokeWeight(2);
-  rect(jellyfish.x, jellyfish.y, jellyfish.size, jellyfish.size);
+  rect(jellyfish.x, jellyfish.y, jellyfish.hitboxWidth, jellyfish.hitboxHeight);
   pop();
 }
 
@@ -611,3 +666,4 @@ function drawPausedGameFrame() {
   textSize(20); text("TAP ANYWHERE TO RESUME", width / 2, height / 2 + 60);
   pop();
 }
+
