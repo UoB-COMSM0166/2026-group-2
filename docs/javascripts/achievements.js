@@ -10,7 +10,7 @@ const achievementList = [
   { id: 'a7', label: 'Legendary Wings', desc: 'Score 100 pts in one run' },
   { id: 'a8', label: 'Zen Moment', desc: 'No clicks for 5 seconds' }, 
   { id: 'a9', label: 'Fast Demise', desc: 'Die within 3s of starting' },
-  { id: 'a10', label: 'Nine Lives', desc: 'Reach 8 lives in one run' },
+  { id: 'a10', label: 'Eight Lives', desc: 'Reach 8 lives in one run' },
   { id: 'a11', label: 'Pure Flight', desc: 'Score 30 without using items' },
   { id: 'a12', label: 'Gravity Buster', desc: 'Score 40 in Heavy Mode' },
   { id: 'a13', label: 'Gold Miner', desc: 'Use 10 items in one run' },
