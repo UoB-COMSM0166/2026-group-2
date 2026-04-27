@@ -209,6 +209,12 @@ Instead of keeping the character's movement fixed throughout the game, we design
 In particular, the reverse gravity mode applies negative gravity values and an opposite lift direction, creating a buoyancy effect that changes the way players control the character.
 From a technical perspective, this feature is implemented through parameterised level design and dynamic updates to the gravity direction at runtime.
 
+
+<p>
+    <img src="images/G_Up.gif" width="45%" />
+    <img src="images/G_Down.gif" width="45%" />
+</p>
+
 <p align="center">
   <img src="images/Implementation/Gravity-mode-1.png" width="750"><br>
   <em>Gravity Mode 1</em>
