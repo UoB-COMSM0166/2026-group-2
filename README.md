@@ -646,7 +646,37 @@ The project follows standard web development workflows to maintain consistent pe
 
 - Reflect on the project as a whole. Lessons learnt. Reflect on challenges. Future work, describe both immediate next steps for your current game and also what you would potentially do if you had chance to develop a sequel.
 
+<p align="center">
+  <strong>Table 9</strong><br>
+  <em>Table to demonstrate team contributions for Game Project.</em>
+</p>
 
+<table align="center">
+  <tr>
+    <th>Contributor</th>
+    <th>Contribution</th>
+  </tr>
+  <tr>
+    <td>Jingyang Xia</td>
+    <td>1.00</td>
+  </tr>
+  <tr>
+    <td>Haolan Hu</td>
+    <td>1.00</td>
+  </tr>
+  <tr>
+    <td>Chuanxin Zhao</td>
+    <td>1.00</td>
+  </tr>
+  <tr>
+    <td>Jintong He</td>
+    <td>1.00</td>
+  </tr>
+  <tr>
+    <td>Yinghui Chen</td>
+    <td>1.00</td>
+  </tr>
+</table>
 
 
 # 10.AI Statement
