@@ -1,11 +1,17 @@
-<img src="images/Poster.JPG" width="600">
+<p align="center">
+  <img src="images/Poster.JPG" width="600">
+</p>
 
 
 
 
 
 
-🚀 [Launch Game: Click here to play Jellydrift](https://uob-comsm0166.github.io/2026-group-2/)
+<p align="center">
+  <a href="https://uob-comsm0166.github.io/2026-group-2/">
+    <b>🪼 Launch Game: Click here to play Jellydrift</b>
+  </a>
+</p>
 
 
 
@@ -14,7 +20,9 @@
 
 
 
-![demo](images/demonstration-2.gif)
+<p align="center">
+  <img src="images/demonstration-2.gif" width="700">
+</p>
 
 
 
@@ -26,7 +34,9 @@
 
 # 1.Our Team
 
-<img src="images/team.jpg" width="600">
+<p align="center">
+  <img src="images/team.jpg" width="600">
+</p>
 
 
 | Name | Email | Role |
@@ -56,7 +66,7 @@ What makes our game novel is the combination of dynamic gravity changes, multipl
 
 # 3.Requirements 
 
-## Ideation process
+## (1) Ideation process
 
 During the first week of group discussions, we finalized the game concept—to create a game that players can use to de-stress in their free time. Each person proposed one or two interesting game ideas. While deciding on the direction, we considered two main aspects. First, we wanted to learn about the key technologies of 2D games; second, we preferred to design a casual and stress-relieving gameplay mechanic. Based on the results of the first week's discussions, in the second week, our team, after brainstorming, ultimately selected the following two game concepts.
 | Game Name | Introduce |
@@ -64,19 +74,22 @@ During the first week of group discussions, we finalized the game concept—to c
 | Flappy Bird | Flappy Bird uses "single-touch" controls as its core gameplay. Players simply need to tap the screen repeatedly to keep their character at a certain height and navigate through constantly appearing obstacle pipes. |
 | Thunder Fighter | It's a vertical scrolling aerial combat shooting game. Players control a fighter jet, dodging enemy bullets, shooting down enemy planes, and collecting power-ups as the game progresses upwards. |
 
-## Paper Prototypes
+## (2) Paper Prototypes
 
 To gain a more detailed and in-depth understanding of the game mechanics and to compare whether the two games align with our game philosophy, we created two paper prototypes during the third workshop. Based on feedback from the paper models and students' feedback after playing the games, we further compared the two game concepts (see Table 1).
 
-Flappy Bird：
 
-![demo](images/FlappyBird-demo.gif)
+<p align="center"><b>Flappy Bird:</b></p>
 
+<p align="center">
+  <img src="images/FlappyBird-demo.gif" width="700">
+</p>
 
+<p align="center"><b>Thunder Fighter:</b></p>
 
-Thunder Fighter：
-
-![demo](images/ThunderFighter-demo.gif)
+<p align="center">
+  <img src="images/ThunderFighter-demo.gif" width="700">
+</p>
 
 
 
@@ -92,25 +105,28 @@ In our discussion, we compared the two games in terms of difficulty and visual s
 
 Therefore, we hope to develop a game based on Flappy Bird's core gameplay, where players control a character through obstacles by clicking. Building upon this, we will introduce level structures and an item system, allowing the game to maintain its simple controls and fast pace while adding gameplay variations and phased goals, thereby enhancing overall playability and sustained experience.
 
-## stakeholders
+## (3) stakeholders
 
 The Onion Model helps us categorise stakeholders based on their proximity to the system.
 Direct users interact with the game directly, while support roles enable its development and evaluation.
 The containing system imposes technical and organisational constraints, and the wider environment reflects indirect but influential stakeholders.
 
+<p align="center">
 <img width="577" height="388" alt="截屏2026-02-16 14 22 49" src="https://github.com/user-attachments/assets/60d615c3-519f-45ef-83de-a3a34eceb1c1" />
+</p>
 
 
-## Use Case
+## (4) Use Case
 
 The use case diagram for Jelly Drift provides a high-level representation of the system’s functional requirements by showing how the Player interacts with the game. The main actor in the diagram is the player, who initiates and controls most of the core game activities.
 
 The diagram shows that the player can Start Game and Play Game as the two primary interactions. The Start Game use case includes Select Game Mode and Check High Score / Hall of Fame, suggesting that these are necessary or closely related actions before entering the game. During Play Game, the player may perform or experience several extended actions, including Move Jellyfish, Use Item, Lose Game, and opening the In-Game Menu. This indicates that gameplay is the central use case, with other actions occurring as optional or condition-based extensions. In addition, the In-Game Menu includes Quit Game and Restart Game, which allow the player to manage the current game session.
 
-
+<p align="center">
 <img width="658" height="636" alt="image" src="https://github.com/user-attachments/assets/47743372-bda2-4c0a-87cf-7f4b52f7a536" />
+</p>
 
-## User stories
+## (5) User stories
 
 
 
@@ -150,12 +166,33 @@ Our game is built around several main components:
 
 As can be seen from the initial class diagram, our game adopts a centralized control structure centered around the Game Controller. This controller is responsible for managing game state, score, health, collision detection, item effects, and interactions between main game objects. The class diagram already includes core modules such as the player character Jellyfish, obstacles Pipe, items, and the achievement manager, indicating that the basic gameplay and functional framework of the game has been initially formed. However, this version of the class diagram also reveals some issues, such as the main controller's responsibilities being too centralized, different game modes not yet being independently modeled, and item functionality being relatively simple. These issues provide a clear direction for subsequent class diagram optimization and system refactoring.
 
-![Class Diagram](images/class-diagram.png)
+<p align="center">
+  <img src="images/class-diagram.png" width="850"><br>
+  <em>Class Diagram</em>
+</p>
+
 - 
 
 Compared with the initial class diagram, the final version shows that our game has developed from a simple playable prototype into a more complete game system. The final design introduces richer game states, player statistics, environmental elements, and a more complete achievement system. New classes such as Seaweed and Bubble improve both the visual presentation and the thematic consistency of the game. In addition, the final class diagram better reflects our core design ideas, especially gravity changes, level progression, and item-based interactions.
 
-![Final class diagram](images/final-class-diagram.png)
+<p align="center">
+  <img src="images/final-class-diagram.png" width="850"><br>
+  <em>Final Class Diagram</em>
+</p>
+
+
+## Behavioural diagrams
+
+Following the Class Diagram, we developed a Sequence Diagram to illustrate how the main game objects interact during gameplay. This was particularly important for organising the runtime logic of our project, as it clearly shows the communication between the Player, Game Controller, Jellyfish, Pipe, Item, and Achievement systems. By visualising these interactions, we were able to improve code structure, simplify debugging, and better manage the increasing complexity of the game loop.
+
+<p align="center">
+  <img src="images/Sequence-Diagram..png" width="800"><br>
+  <em>Figure 14. Sequence Diagram</em>
+</p>
+
+Based on the final game design, the sequence begins when the player starts the game, triggering the Game Controller to initialise the Jellyfish and reset all pipes and items. During the main game loop, the controller continuously updates object states, handles movement physics, checks collisions, and detects overlap with obstacles or collectibles. If an item is collected, the system applies the corresponding effect, updates player statistics, and checks whether any achievements have been unlocked. When the Jellyfish successfully passes a pipe, the score increases and progress data is recorded. If a collision occurs, the system reduces lives or ends the game depending on the remaining health. Once achievement conditions are met, a notification is displayed to reward the player.
+
+When developing our game, we followed an iterative process in which the sequence diagram was regularly updated alongside the source code. As new mechanics such as lives, items, and achievements were added, the diagram helped us maintain a clear overview of object responsibilities and interaction flow. This ensured that new features could be integrated consistently while reducing logic errors during development.
 
 
 # 5.Implementation
@@ -172,7 +209,11 @@ Instead of keeping the character's movement fixed throughout the game, we design
 In particular, the reverse gravity mode applies negative gravity values and an opposite lift direction, creating a buoyancy effect that changes the way players control the character.
 From a technical perspective, this feature is implemented through parameterised level design and dynamic updates to the gravity direction at runtime.
 
-![Gravity mode 1](images/Implementation/Gravity-mode-1.png)
+<p align="center">
+  <img src="images/Implementation/Gravity-mode-1.png" width="750"><br>
+  <em>Gravity Mode 1</em>
+</p>
+
 
 
 ## 5.2 Item System Innovation
@@ -182,14 +223,22 @@ Unlike manually activated abilities, these items are randomly distributed betwee
 The three items provide different gameplay effects. The shield item increases the player’s life value, improving survivability after collisions. The dash item temporarily boosts movement speed, removes the effect of gravity, and creates a short invincible state, allowing the character to pass through obstacles safely for a limited time. The feather item reduces the influence of gravity and lift, creating a floating effect that makes character movement smoother and easier to control.
 From a design perspective, this item system increases unpredictability and moment-to-moment variation in gameplay, as players may encounter different item effects at different positions in each run. From a technical perspective, the feature is implemented through a centralised effect-handling function and timer-based status updates, allowing item effects to be triggered instantly on contact and maintained for a controlled duration during runtime.
 
-![Props 2](images/Implementation/Props2.png)
+<p align="center">
+  <img src="images/Implementation/Props2.png" width="750"><br>
+  <em>Item System Demonstration</em>
+</p>
+
 
 
 ## 5.3 Achievement Hall Innovation
 
 Our third innovation is the introduction of an Achievement Hall system, which extends the game beyond simple survival and scoring by adding a collection-based progression mechanic. Instead of rewarding players only for high scores, the system recognises a wide range of play behaviours, such as passing obstacles, using items, surviving for long periods, completing mode-specific challenges, and reaching unusual gameplay conditions. This encourages players to explore different strategies and repeatedly engage with the game in order to unlock more achievements. From a design perspective, the Achievement Hall increases replayability, provides long-term goals, and gives players a clearer sense of progress. From a technical perspective, the feature is implemented through a structured achievement list and a centralised checking function, which continuously evaluates gameplay statistics and session data during runtime. This allows achievements to be unlocked automatically when specific conditions are met, creating a reward system that is both scalable and closely integrated with the core gameplay loop.
 
-![Hall of Fame 1](images/Implementation/Hall-of-Fame-1.jpg)
+<p align="center">
+  <img src="images/Implementation/Hall-of-Fame-1.jpg" width="750"><br>
+  <em>Hall of Fame</em>
+</p>
+
 
 
 # 6.Evaluation
@@ -220,9 +269,15 @@ Suggested improvements:
 
  - Provide clear descriptions or instructions for all tools and items so that players can better understand their functions.
 
+<p align="center">
+  <img src="images/menu_compare.png" alt="menu Diagram" width="600">
+</p>
 
-<img src="images/menu_compare.png" alt="menu Diagram" width="600">
-<img src="images/Play_ready.png" alt="Play Diagram" width="600">
+<p align="center">
+  <img src="images/Play_ready.png" alt="Play Diagram" width="600">
+</p>
+
+
 
 **(2) Heuristic Evaluation**
 
@@ -267,9 +322,9 @@ We also used the NASA questionnaire to exaine the perceived workload of the game
 
 
 
-
+<p align="center">
 <img src="images/NASA_Plot.jpg" alt="NASA Diagram" width="700">
-
+</p>
 
 **(2) SUS**
 
@@ -278,8 +333,9 @@ We also used the SUS to gain a broader measure of preceived usability. The SUS r
 However, the error bars also show noticeable variation in some responses, suggesting that not all players experienced the game in the same way. In particular, aspects such as feature integration, consistency, and the clarity of learning requiements still need refinement.
 
 
-
+<p align="center">
 <img src="images/SUS.png" alt="SUS Diagram" width="700">
+</p>
 
 In the figure, items 1-9 correspond to the following statement:
 
