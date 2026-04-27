@@ -246,6 +246,11 @@ From a design perspective, this item system increases unpredictability and momen
 
 Our third innovation is the introduction of an Achievement Hall system, which extends the game beyond simple survival and scoring by adding a collection-based progression mechanic. Instead of rewarding players only for high scores, the system recognises a wide range of play behaviours, such as passing obstacles, using items, surviving for long periods, completing mode-specific challenges, and reaching unusual gameplay conditions. This encourages players to explore different strategies and repeatedly engage with the game in order to unlock more achievements. From a design perspective, the Achievement Hall increases replayability, provides long-term goals, and gives players a clearer sense of progress. From a technical perspective, the feature is implemented through a structured achievement list and a centralised checking function, which continuously evaluates gameplay statistics and session data during runtime. This allows achievements to be unlocked automatically when specific conditions are met, creating a reward system that is both scalable and closely integrated with the core gameplay loop.
 
+
+<p align="center">
+  <img src="images/Achievement.JPG" width="600"><br>
+</p>
+
 <p align="center">
   <img src="images/Implementation/Hall-of-Fame-1.jpg" width="750"><br>
   <em>Hall of Fame</em>
