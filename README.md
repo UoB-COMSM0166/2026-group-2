@@ -46,9 +46,13 @@ Our game is a casual arcade game inspired by Flappy Bird and Thunder Fighter. It
 
 The game includes four different modes: Normal Mode, Hard Mode, Gravity Reversal Mode, and Chaos Mode. Normal Mode provides the basic gameplay experience and serves as the foundation of the whole game. Hard Mode increases the challenge by making movement faster and harder to control. Gravity Reversal Mode changes the usual movement logic by making the jellyfish float upward naturally unless the player taps to move downward, creating a fresh and unfamiliar control experience. Chaos Mode combines different gravity rules and changing movement patterns, making it the most unpredictable and challenging mode.
 
-The game also contains three items: a star, a harpoon, and a bubble. The star restores health, the harpoon gives a speed dash with temporary invincibility, and the bubble reduces gravity to make movement easier for a short time.
-
 What makes our game novel is the combination of dynamic gravity changes, multiple gameplay modes, and strategic item appearances within a simple one-tap system. While the controls are easy to learn, the changing gravity and item timing add depth, challenge, and variety, giving players a more creative experience than a traditional Flappy Bird-style game.
+
+| Category | Image | Description |
+|----------|-------|-------------|
+| Star | ❤️ | The star restores health. |
+| Harpoon | 🔱 | The harpoon gives a speed dash with temporary invincibility. |
+| Bubble | 🫧 | The bubble reduces gravity to make movement easier for a short time. |
 
 # 3.Requirements 
 
@@ -123,9 +127,6 @@ The diagram shows that the player can Start Game and Play Game as the two primar
 
 
 # 4.Design
-
-- 15% ~750 words 
-- System architecture. Class diagrams, behavioural diagrams.
 
 ## System Architecture
 
