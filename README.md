@@ -229,6 +229,12 @@ Unlike manually activated abilities, these items are randomly distributed betwee
 The three items provide different gameplay effects. The shield item increases the player’s life value, improving survivability after collisions. The dash item temporarily boosts movement speed, removes the effect of gravity, and creates a short invincible state, allowing the character to pass through obstacles safely for a limited time. The feather item reduces the influence of gravity and lift, creating a floating effect that makes character movement smoother and easier to control.
 From a design perspective, this item system increases unpredictability and moment-to-moment variation in gameplay, as players may encounter different item effects at different positions in each run. From a technical perspective, the feature is implemented through a centralised effect-handling function and timer-based status updates, allowing item effects to be triggered instantly on contact and maintained for a controlled duration during runtime.
 
+
+<p align="center">
+  <img src="images/items.gif" width="700">
+</p>
+
+
 <p align="center">
   <img src="images/Implementation/Props2.png" width="750"><br>
   <em>Item System Demonstration</em>
