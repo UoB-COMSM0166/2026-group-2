@@ -302,7 +302,7 @@ To develop our game, we focused on creating a system that was easy to understand
 
 The second challenge was the item system. We designed three different items: one that restores life, one that temporarily changes gravity to make movement easier, and one that provides a short invincible dash. These items needed to appear at suitable moments and work smoothly with the different game modes. In the following section, we explain how these two technical challenges were implemented and how they shaped the final gameplay experience.
 
-## (1) Gravity-Based Gameplay Innovation
+## (1) Gravity-based gameplay challenge
 
 Our game introduces an innovative gravity-based gameplay mechanic, extending the traditional single-gravity system into multiple physics modes, including standard gravity and a buoyancy-like reverse gravity.
 Instead of keeping the character's movement fixed throughout the game, we designed a level configuration system in which each mode is defined by different physical parameters, such as gravity and lift. This allows the game to create clearly different interactive experiences across modes.
@@ -330,7 +330,7 @@ From a technical perspective, this feature is implemented through parameterised 
 
 
 
-## (2) Item System Innovation
+## (2) Item System challenge
 
 Another key innovation in our game is the introduction of a three-item system, designed to enrich gameplay variety beyond the basic obstacle-avoidance mechanic.
 Unlike manually activated abilities, these items are randomly distributed between obstacles during gameplay. Once the player-controlled character touches an item, its effect is triggered immediately. This design makes item collection a dynamic part of the movement and avoidance process, requiring players to react in real time while navigating through the level.
@@ -358,7 +358,7 @@ From a design perspective, this item system increases unpredictability and momen
 
 
 
-## (3) Achievement Hall Innovation
+## (3) Achievement Hall challenge
 
 Our third innovation is the introduction of an Achievement Hall system, which extends the game beyond simple survival and scoring by adding a collection-based progression mechanic. Instead of rewarding players only for high scores, the system recognises a wide range of play behaviours, such as passing obstacles, using items, surviving for long periods, completing mode-specific challenges, and reaching unusual gameplay conditions. This encourages players to explore different strategies and repeatedly engage with the game in order to unlock more achievements. From a design perspective, the Achievement Hall increases replayability, provides long-term goals, and gives players a clearer sense of progress. From a technical perspective, the feature is implemented through a structured achievement list and a centralised checking function, which continuously evaluates gameplay statistics and session data during runtime. This allows achievements to be unlocked automatically when specific conditions are met, creating a reward system that is both scalable and closely integrated with the core gameplay loop.
 
