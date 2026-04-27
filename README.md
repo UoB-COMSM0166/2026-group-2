@@ -210,7 +210,7 @@ In particular, the reverse gravity mode applies negative gravity values and an o
 From a technical perspective, this feature is implemented through parameterised level design and dynamic updates to the gravity direction at runtime.
 
 
-<p>
+<p align="center">
     <img src="images/G_Up.gif" width="45%" />
     <img src="images/G_Down.gif" width="45%" />
 </p>
