@@ -26,7 +26,7 @@
 
 # 1.Our Team
 
-<img src="images/Team-Member.jpg" width="600">
+<img src="images/team.jpg" width="600">
 
 
 | Name | Email | Role |
