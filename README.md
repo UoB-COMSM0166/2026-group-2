@@ -26,9 +26,19 @@
 
 
 
+# Table of Contents
 
-# Table of Content
-
+- [1. Our Team](#1-our-team)
+- [2. Introduction](#2-introduction)
+- [3. Requirements](#3-requirements)
+- [4. Design](#4-design)
+- [5. Implementation](#5-implementation)
+- [6. Evaluation](#6-evaluation)
+- [7. Process](#7-process)
+- [8. Sustainability, Ethics and Accessibility](#8-sustainability-ethics-and-accessibility)
+- [9. Conclusion](#9-conclusion)
+- [10. AI Statement](#10-ai-statement)
+- [11. Appendices](#11-appendices)
 
 
 
