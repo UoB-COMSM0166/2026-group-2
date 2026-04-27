@@ -232,7 +232,7 @@ The diagram shows that the player can Start Game and Play Game as the two primar
 
 # 4.Design
 
-## System Architecture
+## (1) System Architecture
 
 Our game is built around several main components:
 
@@ -250,7 +250,7 @@ Our game is built around several main components:
   <li><strong>AchievementManager:</strong> Tracks, unlocks, displays, and saves achievements during gameplay.</li>
 </ul>
 
-## class diagrams
+## (2) class diagrams
 
 As can be seen from the initial class diagram, our game adopts a centralized control structure centered around the Game Controller. This controller is responsible for managing game state, score, health, collision detection, item effects, and interactions between main game objects. The class diagram already includes core modules such as the player character Jellyfish, obstacles Pipe, items, and the achievement manager, indicating that the basic gameplay and functional framework of the game has been initially formed. However, this version of the class diagram also reveals some issues, such as the main controller's responsibilities being too centralized, different game modes not yet being independently modeled, and item functionality being relatively simple. These issues provide a clear direction for subsequent class diagram optimization and system refactoring.
 
@@ -277,7 +277,7 @@ Compared with the initial class diagram, the final version shows that our game h
 </p>
 
 
-## Behavioural diagrams
+## (3) Behavioural diagrams
 
 Following the Class Diagram, we developed a Sequence Diagram to illustrate how the main game objects interact during gameplay. This was particularly important for organising the runtime logic of our project, as it clearly shows the communication between the Player, Game Controller, Jellyfish, Pipe, Item, and Achievement systems. By visualising these interactions, we were able to improve code structure, simplify debugging, and better manage the increasing complexity of the game loop.
 
@@ -302,7 +302,7 @@ To develop our game, we focused on creating a system that was easy to understand
 
 The second challenge was the item system. We designed three different items: one that restores life, one that temporarily changes gravity to make movement easier, and one that provides a short invincible dash. These items needed to appear at suitable moments and work smoothly with the different game modes. In the following section, we explain how these two technical challenges were implemented and how they shaped the final gameplay experience.
 
-## 5.1 Gravity-Based Gameplay Innovation
+## (1) Gravity-Based Gameplay Innovation
 
 Our game introduces an innovative gravity-based gameplay mechanic, extending the traditional single-gravity system into multiple physics modes, including standard gravity and a buoyancy-like reverse gravity.
 Instead of keeping the character's movement fixed throughout the game, we designed a level configuration system in which each mode is defined by different physical parameters, such as gravity and lift. This allows the game to create clearly different interactive experiences across modes.
@@ -330,7 +330,7 @@ From a technical perspective, this feature is implemented through parameterised 
 
 
 
-## 5.2 Item System Innovation
+## (2) Item System Innovation
 
 Another key innovation in our game is the introduction of a three-item system, designed to enrich gameplay variety beyond the basic obstacle-avoidance mechanic.
 Unlike manually activated abilities, these items are randomly distributed between obstacles during gameplay. Once the player-controlled character touches an item, its effect is triggered immediately. This design makes item collection a dynamic part of the movement and avoidance process, requiring players to react in real time while navigating through the level.
@@ -358,7 +358,7 @@ From a design perspective, this item system increases unpredictability and momen
 
 
 
-## 5.3 Achievement Hall Innovation
+## (3) Achievement Hall Innovation
 
 Our third innovation is the introduction of an Achievement Hall system, which extends the game beyond simple survival and scoring by adding a collection-based progression mechanic. Instead of rewarding players only for high scores, the system recognises a wide range of play behaviours, such as passing obstacles, using items, surviving for long periods, completing mode-specific challenges, and reaching unusual gameplay conditions. This encourages players to explore different strategies and repeatedly engage with the game in order to unlock more achievements. From a design perspective, the Achievement Hall increases replayability, provides long-term goals, and gives players a clearer sense of progress. From a technical perspective, the feature is implemented through a structured achievement list and a centralised checking function, which continuously evaluates gameplay statistics and session data during runtime. This allows achievements to be unlocked automatically when specific conditions are met, creating a reward system that is both scalable and closely integrated with the core gameplay loop.
 
@@ -386,9 +386,9 @@ Our third innovation is the introduction of an Achievement Hall system, which ex
 
 The evaluation aimed to assess both the playability and the technical quality of JellyDrift. The evaluation is focused on four aspect: ease of learning, game playability,clarity of game feedback, and correctness of implementation. To achieve this, we combined qualitative user-based evaluation methods (NASA, SUS) with manual black-box and white-box testing. 
 
-## Qualitative Evaluation
+## (1) Qualitative Evaluation
 
-**(1) Think aloud**
+**Think aloud**
 
 We used the Think Aloud method to observe how players undetstood and interacted with the game in real time. Participants were asked to play the game while describing what they were thinking, what they found easy or difficult, and how they interpreted the feedback provided by the game.
 
@@ -425,7 +425,7 @@ Suggested improvements:
 
 
 
-**(2) Heuristic Evaluation**
+**Heuristic Evaluation**
 
 We also carried out a heuristic evaluation to access the interface and gameplay against established usability principles. This method helped us examine the game in a more structrued way, especially in areas such as system visibility, user control, consitency, and error prevention. The heuristic evaluation is summarized in table below:
 
@@ -464,10 +464,10 @@ After summarizing all the feedback received from the qualitative assessment, we 
 
 
 
-## Questionnaire-Based Evaluation
+## (2) Questionnaire-Based Evaluation
 
 
-**(1) NASA-TLX**
+**NASA-TLX**
 
 We also used the NASA questionnaire to exaine the perceived workload of the game, which was important because one of the original goals of *Jelly Drift* was to create a causal and stress-relieving experience. Thus, players' mental demand while playing the game is a important criterion. 
 
@@ -479,7 +479,7 @@ We also used the NASA questionnaire to exaine the perceived workload of the game
 <img src="images/NASA_Plot.jpg" alt="NASA Diagram" width="700">
 </p>
 
-**(2) SUS**
+**SUS**
 
 We also used the SUS to gain a broader measure of preceived usability. The SUS results below suggest that *Jelly Drift* is generally usable and approachable for players. Items related to confidence, williness to continue playing the game, and perceived easy of learning received relatively high scores, indicating that the core gameplay logic is easy to understand and interacti with. This is consistent with the design goal of the game that providing a simple, casual, and accessible experience. 
 
@@ -508,8 +508,8 @@ In the figure, items 1-9 correspond to the following statement:
 
 
 
-## Functional Testing
-**(1) BlackBox Testing**
+## (3) Functional Testing
+**BlackBox Testing**
 
 Black-box testing was used to verify the game from the player's perspective, without replying on internal code knowledge. The test cases here covered launching the game, selecting modes, controlling the jellyfish, passing obstacles, collecting items, colliding with pipes and boundaries, triggering game-over states, and restarting or returning to the menu.
 
@@ -526,7 +526,7 @@ This testing process was particularly useful in identifying player-visible defec
 </p>
 
 
-**(2) White-Box Testing**
+**White-Box Testing**
 
 White-box testing focuses on the internal logic of the most important gameplay functions. In particular, we examined the behavior of the main game loop, item activation, and collision handling. The main functions considered in this stage included the logic for active play progression, applying item effects, and handling collisions. These tests helpd verify that dash and feather effects updated correctly over time, that collision produced the correct life and state changes, and that scoring logic behavied as expected under different conditions. These was especially valuable in game like *Jelly Drift*, where many features interact in real time and where some bugs may not be easy to isolate through gameplay observation alons.
 
@@ -618,13 +618,13 @@ White-box testing focuses on the internal logic of the most important gameplay f
 
 # 8.Sustainability, ethics and accessibility
 
-## Environmental Impact
+## (1) Environmental Impact
 
 As a lightweight browser-based game, Jellydrift is designed with sustainability and low environmental impact in mind. It runs directly in a web browser without requiring any additional installation or local storage space, which effectively reduces resource consumption linked to large scale data transmission, device storage usage, and the energy required to download and install traditional applications. By operating entirely within a browser environment, the game avoids the unnecessary digital waste associated with downloadable software, such as redundant installation files and ongoing storage maintenance, making it a more environmentally responsible choice for digital entertainment. Additionally, the lightweight code and asset design of the game helps reduce the load on servers, as it does not require dedicated, high-power servers to support its operation—unlike traditional downloadable games—thus cutting down on the energy consumption generated by long-term server operation.
 
 The game uses lightweight visual and audio assets supported by an efficient and streamlined code structure, allowing it to run responsively across a wide range of devices while keeping energy consumption low. This efficiency not only ensures smooth gameplay on both high-spec and low-spec devices but also reduces the power required to operate the game over extended periods, minimizing the carbon footprint associated with device usage. Furthermore, the low energy consumption of the game helps reduce the frequency of device charging, whether on desktop computers, tablets, or mobile devices, indirectly lowering the environmental burden associated with electricity production. This efficient, browser native design ensures a smooth playing experience with minimal resource use and environmental footprint, aligning with the core principles of sustainable digital design.
 
-## Individual Impact
+## (2) Individual Impact
 
 Jellydrift is designed to offer a player centred experience that balances challenge with accessibility, making it enjoyable for a broad range of users. The game begins with clear on screen instructions, guiding players through the simple tap to control mechanic to ensure even first time or less experienced players can start comfortably.
 
@@ -633,7 +633,7 @@ The game begins with five initial lives and three power-ups—an extra life, a s
 Complementing the core gameplay is the “Hall of Fame” achievement system, which rewards players for milestones like surviving longer runs, collecting items, and mastering modes. These achievements add progression and long term motivation, encouraging personal goals over sole focus on high scores. Importantly, the game has no in app purchases or disruptive advertisements, ensuring equal access to the full experience without pay to win mechanics or distractions. These features create a supportive, rewarding experience prioritising player enjoyment and growth.
 
 
-## Technical Impact
+## (3) Technical Impact
 
 Jellydrift is developed using the open-source p5.js framework, supporting transparent, sustainable, and accessible development practices that keep the project independent from proprietary tools. As a lightweight browser-based game built on a web architecture, it boasts strong compatibility—requiring no installation, no specific operating system, and no high hardware specifications to run stably. This ensures it can operate smoothly on both new devices and older, lower-spec equipment, enhancing accessibility while indirectly reducing electronic waste by extending the service life of existing hardware, aligning technical design with environmental sustainability.
 
@@ -642,9 +642,15 @@ The project follows standard web development workflows to maintain consistent pe
 
 # 9.Conclusion
 
-- 10% ~500 words
 
-- Reflect on the project as a whole. Lessons learnt. Reflect on challenges. Future work, describe both immediate next steps for your current game and also what you would potentially do if you had chance to develop a sequel.
+JellyDrift successfully developed from an early concept into a complete browser-based game that combines simple one-tap controls with more varied mechanics such as multiple gravity modes, collectible items, and an achievement system. Our original aim was to create a casual and stress-relieving game inspired by Flappy Bird, while adding greater replayability and progression. Based on the final outcome, we believe the project achieved this goal by balancing accessibility with challenge and introducing mechanics that make each run feel different.
+
+Throughout the project, we learned several important software engineering lessons. First, iterative development was essential. Early prototypes helped us compare ideas, gather feedback, and refine our chosen direction before large amounts of code were written. Second, teamwork and role division were critical to progress. By separating tasks such as programming, UI design, testing, and documentation, we were able to work more efficiently while maintaining steady development. Third, evaluation methods such as Think Aloud testing, heuristic analysis, SUS, and functional testing showed us the value of user-centred design. Many improvements, such as clearer menus and better balancing, came directly from player feedback.
+
+The main challenges involved tuning difficulty, implementing multiple physics systems, and ensuring temporary item effects worked correctly during runtime. Maintaining consistency between gameplay logic, documentation, and team communication was also challenging as the project evolved quickly. These issues taught us the importance of version control, modular design, and continuous testing.
+
+As immediate next steps, we would improve feedback systems, add clearer game-over messages, rebalance obstacle generation, and introduce pause/settings options. If we were to develop a sequel, we would expand the progression system with unlockable characters, story-based levels, online leaderboards, and cooperative or competitive multiplayer modes. Overall, JellyDrift was a valuable project that strengthened both our technical ability and our understanding of collaborative game development.
+
 
 <p align="center">
   <strong>Table 9</strong><br>
