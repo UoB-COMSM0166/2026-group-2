@@ -730,7 +730,8 @@ As immediate next steps, we would improve feedback systems, add clearer game-ove
 
 
 # 10.AI Statement
-(~250 words)
+
+In writing this project report, we used GPT as an auxiliary tool. Specifically, GPT was used to improve the clarity, grammar, and overall structure of the article, help improve sentence fluency, simplify expression, and ensure consistency in academic terminology.
 
 
 
