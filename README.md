@@ -298,9 +298,14 @@ When developing our game, we followed an iterative process in which the sequence
 # 5.Implementation
 
 
-To develop our game, we focused on creating a system that was easy to understand and simple to control, while still offering enough variation to keep players engaged. During the design and implementation process, we identified two main technical challenges that were central to the gameplay experience. The first challenge was gravity adjustment. Since our game includes multiple modes, we needed to implement different movement rules for each one. In Normal Mode, the character follows a standard gravity setting. In Hard Mode, the gravity is stronger, making movement more difficult to control. In Gravity Reversal Mode, the usual gravity mechanic is replaced by buoyancy, so the character naturally floats upward instead of falling downward. This required us to carefully balance movement logic and player control. 
+To develop our game, we focused on creating a system that was easy to understand and simple to control, while still offering enough variation to keep players engaged. During the design and implementation process, we identified three main technical challenges that were central to the gameplay experience.
 
-The second challenge was the item system. We designed three different items: one that restores life, one that temporarily changes gravity to make movement easier, and one that provides a short invincible dash. These items needed to appear at suitable moments and work smoothly with the different game modes. In the following section, we explain how these two technical challenges were implemented and how they shaped the final gameplay experience.
+The first challenge was gravity adjustment. Since our game includes multiple modes, we needed to implement different movement rules for each one, including standard gravity, increased gravity in hard mode, and a buoyancy-like reverse gravity system.
+
+The second challenge was the item system. We designed multiple items with different effects, such as restoring life, modifying gravity, and providing temporary invincibility, all of which needed to be triggered dynamically and integrated smoothly into gameplay.
+
+The third challenge was the achievement system. We introduced an Achievement Hall that tracks diverse player behaviours and unlocks rewards based on in-game performance, requiring continuous monitoring of game states and efficient condition checking during runtime.
+In the following section, we explain how these three technical challenges were implemented and how they shaped the final gameplay experience.
 
 ## (1) Gravity-based gameplay challenge
 
