@@ -192,7 +192,7 @@ The containing system imposes technical and organisational constraints, and the 
 </p>
 
 <p align="center">
-  <img src="images/Use Case Diagram.png" width="1000">
+  <img width="577" height="388" alt="截屏2026-02-16 14 22 49" src="https://github.com/user-attachments/assets/60d615c3-519f-45ef-83de-a3a34eceb1c1" />
 </p>
 
 
