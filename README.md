@@ -192,7 +192,7 @@ The containing system imposes technical and organisational constraints, and the 
 </p>
 
 <p align="center">
-<img width="577" height="388" alt="截屏2026-02-16 14 22 49" src="https://github.com/user-attachments/assets/60d615c3-519f-45ef-83de-a3a34eceb1c1" />
+  <img src="images/Use Case Diagram.png" width="1000">
 </p>
 
 
@@ -614,9 +614,43 @@ White-box testing focuses on the internal logic of the most important gameplay f
 
 ## (1) Teamwork
 We held regular in-person group meetings each week. When members could not attend face-to-face sessions, remote discussions took place through Tencent Meeting instead.
+<p align="center">
+  <strong>Figure 17</strong><br>
+  <em>Team meeting</em>
+</p>
+
+<p align="center">
+  <img src="images/team meeting.jpg" width="600">
+</p>
 
 During class, we used guided workshop time and group discussion sessions to share ideas about game design, development plans and technical issues. After class, we held additional group meetings to consolidate ideas shared in class, organise our overall progress, and set clear tasks for the week ahead. Roles were defined early in the project. Some members focused on programming and testing to develop functional game features, while others concentrated on writing and organising project documentation to keep all written work clear and well-structured.
 
+## (2) Tools
+A variety of tools were adopted to support daily development and team collaboration. VS Code acted as our primary development software for writing, debugging and modifying code to maintain an efficient working rhythm throughout the project. Excel sheets were used to collect feedback from game testing, recording technical issues and optimisation suggestions to guide subsequent code adjustment and feature refinement. Team members relied on WeChat for daily communication to resolve technical questions, share working progress and deliver timely notifications, while Tencent Meeting provided a reliable platform for online collaboration when face-to-face meetings were unavailable.
+
+<p align="center">
+  <strong>Figure 18</strong><br>
+  <em>Online meeting</em>
+</p>
+
+<p align="center">
+  <img src="images/Online meeting via Tencent Meeting.jpg" width="400">
+</p>
+
+GitHub Kanban was adopted as our core task management tool, where all project work was divided into three standard categories: Backlog, In Progress and Done. The team updated task statuses every week after group meetings, moving newly assigned tasks into the backlog section, shifting ongoing work to the active column, and filing finished tasks under completed items after careful checks. This method kept overall progress fully transparent and easy to track, and allowed the group to review finished work and arrange upcoming tasks reasonably.
+
+<p align="center">
+  <strong>Figure 19</strong><br>
+  <em>Kanban Board</em>
+</p>
+
+<p align="center">
+  <img src="images/Kanban board.png" width="1000">
+</p>
+All project files and finished code were uploaded directly to the main GitHub repository so that every member could access the latest unified version at any time. Internal cross-review was carried out regularly, where members checked each other’s program code and written reports to correct minor errors and maintain consistent logic and overall quality across all submitted work.
+
+## (3) Collaboration Experience & Reflection
+Throughout the project, the team faced a number of common collaborative challenges. Multiple users editing and uploading files at the same time occasionally caused content conflicts and slowed down overall progress. In the early stage, general task descriptions led to inconsistent understanding among members and slightly delayed workflow. In addition, after completing core game functions, initial testing revealed several imperfect details, including awkward operation and unreasonable design logic, which required further optimisation based on test feedback. To resolve these issues, the team adopted practical adjustments to improve cooperation efficiency. We coordinated uploading time in advance to avoid simultaneous file editing, and strengthened mutual checking to reduce avoidable mistakes before submission. Weekly meetings helped clarify specific task requirements, standards and deadlines, while updated information on the Kanban board ensured everyone maintained the same understanding of ongoing work. We also analysed test feedback collected from Excel records and adjusted code details and game logic accordingly, which greatly improved operational smoothness and system stability. With these continuous improvements, team cooperation became more orderly and efficient, file conflicts decreased significantly, and task progression became more stable and coherent.
 
 
 # 8.Sustainability, ethics and accessibility
