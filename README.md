@@ -549,44 +549,6 @@ White-box testing focuses on the internal logic of the most important gameplay f
   <strong>Table 7</strong><br>
 </p>
 
-| Test ID | Feature | Precondition | Step | Expected | Actual | Note | Vesion |
-|---------|---------|--------------|------|----------|--------|------|--------|
-|**Launch & Entry**||||||||
-| BB-01 | Lauch | Server running | Open http://localhost:3000(run local hoster) | Game screen loads (background, birds, music), no console errors | Pass | | V1 |
-| BB-02 | Reload behavior | game is running | refresh the page | game return to the initial state (score reset) | Fail | score does not reset | V1 |
-| BB-02 | Reload behavior | game is running | refresh the page | game return to the initial state (score reset) | Pass | score does not reset | V2 |
-|**Mode/Restart**||||||||
-| BB-03 | Normal mode on launch | page loaded | click normal mode | normal is shown with corret background, and jellyfish, and music | Pass |  | V1 |
-| BB-04 | Return to main page | any mode is loaded | click "home" | return to main page, game screen loads | Fail | function not availble | V1 |
-| BB-04 | Return to main page | any mode is loaded | click "home" | return to main page, game screen loads | Pass | function not availble | V2 |
-| BB-05 | Normal mode play | Normal mode loaded | click to start | correct gravity assigned, wall generated, wall correctly moving towards jellyfish; background music | Pass |  | V1 |
-| BB-06 | Game Over | remain chance equal to 0 | Trigger Game Over | Game restarts; score resets | Pass |  | V1 |
-|**Input Controls**||||||||
-| BB-07 | Mouse click flap | game running in active play state | click inside the game canvas once | jellyfish flaps upward immediately | Pass |  | V1 |
-| BB-08 | Space key flap | game running in active play state | press space onece | jellyfish flaps upward immediately | Fail | no function | V1 |
-| BB-09 | Rapid click | game running in active play state | click rapidly 10+ times | No freeze/crash; jellyfish movement remain consistent; game continues to respond | Pass |  | V1 |
-| BB-10 | Input ignored | game running in active play state | do nothing | Jellyfish falls | Pass |  | V1 |
-|**Scoring**||||||||
-| BB-11 | Score increase after pissing a pipe | score is visible and known | pass one pipe successfully | Score increases by exactly +1 | Fail | score not very visiable | V1 |
-| BB-11 | Score increase after pissing a pipe | score is visible and known | pass one pipe successfully | Score increases by exactly +1 | Pass |  | V2 |
-| BB-12 | Score unchange after not pissing a pipe | score is visible and known | not pass pipe | Score unchange; life decrease by exactly -1 | Fail | score not very visiable | V1 |
-| BB-12 | Score unchange after not pissing a pipe | score is visible and known | not pass pipe | Score unchange; life decrease by exactly -1 | Pass |  | V2 |
-| BB-13 | Game Over |  | remain life is 0 | shown Game Over on canvas; shown score in this round | Pass |  ||  
-|**Coliision & GameOver**||||||||
-| BB-14 | Collision with upper pipe | In active play | fly into the upper pipe section | life decrease by -1; jellyfish flash indicating hit pipe or boundary and pipe stop moving; jellyfish move back to starting position and pipe restart moving (wait 3-5 seconds) | Fail | No points were deducted when hitting the top of the pillar | V1 |
-| BB-14 | Collision with upper pipe | In active play | fly into the upper pipe section | life decrease by -1; jellyfish flash indicating hit pipe or boundary and pipe stop moving; jellyfish move back to starting position and pipe restart moving (wait 3-5 seconds) | Pass |  | V2 |
-| BB-15 | Collision with lower pipe | In active play | fly into the lower pipe section | life decrease by -1; jellyfish flash indicating hit pipe or boundary and pipe stop moving; jellyfish move back to starting position and pipe restart moving (wait 3-5 seconds) | Fail | Points will be deducted when the bottom of the vehicle does not hit the pillar | V1 |
-| BB-15 | Collision with lower pipe | In active play | fly into the lower pipe section | life decrease by -1; jellyfish flash indicating hit pipe or boundary and pipe stop moving; jellyfish move back to starting position and pipe restart moving (wait 3-5 seconds) | Pass |  | V2 |
-| BB-16(a) | Collision boundary(up) | In active play | fly into the boundary | life decrease by -1; jellyfish flash indicating hit pipe or boundary and pipe stop moving; jellyfish move back to starting position and pipe restart moving(wait 3-5 seconds) | Pass |  | V1 |
-| BB-16(b) | Collision boundary(down) | In active play | fly into the boundary | life decrease by -1; jellyfish flash indicating hit pipe or boundary and pipe stop moving; jellyfish move back to starting position and pipe restart moving(wait 3-5 seconds) | Fail | hit the pole but didn't lose any points | V1 |
-| BB-16(b) | Collision boundary(down) | In active play | fly into the boundary | life decrease by -1; jellyfish flash indicating hit pipe or boundary and pipe stop moving; jellyfish move back to starting position and pipe restart moving(wait 3-5 seconds) | Pass |  | V2 |
-| BB-17 | Game Over Freezes Game Play | Game over triggered | Game over triggered | Shonw "Game Over" on canvas, shown score on canvas, return to main page after click | Fail | game over without screen notice | V1 |
-| BB-17 | Game Over Freezes Game Play | Game over triggered | Game over triggered | Shonw "Game Over" on canvas, shown score on canvas, return to main page after click | Pass |  | V2 |
-|**Reset/Restart**||||||||
-| BB-18 | Restart after game over | game open correctly | remain life is 0 | shown Game Over on canvas; shown score in this round | Fail | game over without screen notice | V1 | 
-| BB-18 | Restart after game over | game open correctly | remain life is 0 | shown Game Over on canvas; shown score in this round | Pass |  | V2 | 
-| BB-19 | Restart in active play| game open correctly | remain life is 0 | shown Game Over on canvas; shown score in this round | Fail | no this function | V1 |
-| BB-19 | Restart in active play| game open correctly | remain life is 0 | shown Game Over on canvas; shown score in this round | Pass |  | V2 |
 
 
 
@@ -596,24 +558,6 @@ White-box testing focuses on the internal logic of the most important gameplay f
   <strong>Table 8</strong><br>
 </p>
 
-| Test ID | Feature | Precondition | Step | Expected | Actual | Note | Version |
-|---------|---------|--------------|------|----------|--------|------|---------|
-|**runGameLogic**||||||||
-|WB-01| Game Started == false | game state is playing, game started is false, jellyfish object exist | call runGameLogic | the function should return early and only jellyfish exist | Pass | | V1 |
-|WB-02| DashTimer > 0 | game state is playing, game started is true | call runGameLogic | DashTimer should decrease by 1, jellyfish velocity should reset | Pass | | V1 |
-|WB-03| featherTimer > 0 | game started is true, game is in normal mode | call runGameLogic | featherTimer should decrease by 1, gravity should be reduce to 40% | Pass | | V1 | 
-|WB-04| Offscreen jellyfish | game is playing, game started is true, game is in normal mode, Offscreen() == true | call runGameLogic | handleCollision(-1) should be triggerd, reducing lifes, recording death | Pass | | V1 |
-|WB-05| Pass pipe is in chaos mode | score is 2, game state is playing, game started is true, current mode is chaos | call runGameLogic | the score should be increased, total pipe increase, sound play, gravity should be flipped when the score multiple of 3 | Pass | | V1 |
-|WB-06| item pick up and removal | game state is playing, game started is true, one nearby dash item is vising collection dash | call runGameLogic | the item should be collected, remove from array, applyEffect() should active the dashTimer | Pass | | V1 |
-|**applyEffect**||||||||
-|WB-07| shield | player has one life remain, item counter start from 0 | call applyEffect('shield') | life counter increased by 1, item counter increase by 1, screen display "actual life", virable 16 unlock | Fail | screen not update | V1 |
-|WB-07| shield | player has one life remain, item counter start from 0 | call applyEffect('shield') | life counter increased by 1, item counter increase by 1, screen display "actual life", virable 16 unlock | Pass |  | V2 |
-|WB-08| dash | no other effects apply | call applyEffect('dash') | dashTimer should be changed 180, screen show dashTimer active | Fail | fail to diaplay dash active | V1 |
-|WB-08| dash | no other effects apply | call applyEffect('dash') | dashTimer should be changed 180, screen show dashTimer active | Pass |  | V2 |
-|WB-09| feather | no other effects active | call applyEffect('feather') | featherTime change to 300, life show lightaway | Pass | | V1 |
-|**handleCollision**||||||||
-|WB-10| live <= 0 | player is on the last life, the game is playing, the score is higher than the highest score | call handleCollision | the game should be end, high score should be updated, the game should return to the menu | Pass |  | V1|
-|WB-11| live > 0 | player has more than one life, the pipe collision happen | call handleCollision | one life should be removed, the pipe should be removed, game play should continue | Pass |  | V1 |
 
 
 
@@ -782,5 +726,67 @@ In writing this project report, we used GPT as an auxiliary tool. Specifically, 
 </table>
 
 
+### BlackBox Test
 
+| Test ID | Feature | Precondition | Step | Expected | Actual | Note | Vesion |
+|---------|---------|--------------|------|----------|--------|------|--------|
+|**Launch & Entry**||||||||
+| BB-01 | Lauch | Server running | Open http://localhost:3000(run local hoster) | Game screen loads (background, birds, music), no console errors | Pass | | V1 |
+| BB-02 | Reload behavior | game is running | refresh the page | game return to the initial state (score reset) | Fail | score does not reset | V1 |
+| BB-02 | Reload behavior | game is running | refresh the page | game return to the initial state (score reset) | Pass | score does not reset | V2 |
+|**Mode/Restart**||||||||
+| BB-03 | Normal mode on launch | page loaded | click normal mode | normal is shown with corret background, and jellyfish, and music | Pass |  | V1 |
+| BB-04 | Return to main page | any mode is loaded | click "home" | return to main page, game screen loads | Fail | function not availble | V1 |
+| BB-04 | Return to main page | any mode is loaded | click "home" | return to main page, game screen loads | Pass | function not availble | V2 |
+| BB-05 | Normal mode play | Normal mode loaded | click to start | correct gravity assigned, wall generated, wall correctly moving towards jellyfish; background music | Pass |  | V1 |
+| BB-06 | Game Over | remain chance equal to 0 | Trigger Game Over | Game restarts; score resets | Pass |  | V1 |
+|**Input Controls**||||||||
+| BB-07 | Mouse click flap | game running in active play state | click inside the game canvas once | jellyfish flaps upward immediately | Pass |  | V1 |
+| BB-08 | Space key flap | game running in active play state | press space onece | jellyfish flaps upward immediately | Fail | no function | V1 |
+| BB-09 | Rapid click | game running in active play state | click rapidly 10+ times | No freeze/crash; jellyfish movement remain consistent; game continues to respond | Pass |  | V1 |
+| BB-10 | Input ignored | game running in active play state | do nothing | Jellyfish falls | Pass |  | V1 |
+|**Scoring**||||||||
+| BB-11 | Score increase after pissing a pipe | score is visible and known | pass one pipe successfully | Score increases by exactly +1 | Fail | score not very visiable | V1 |
+| BB-11 | Score increase after pissing a pipe | score is visible and known | pass one pipe successfully | Score increases by exactly +1 | Pass |  | V2 |
+| BB-12 | Score unchange after not pissing a pipe | score is visible and known | not pass pipe | Score unchange; life decrease by exactly -1 | Fail | score not very visiable | V1 |
+| BB-12 | Score unchange after not pissing a pipe | score is visible and known | not pass pipe | Score unchange; life decrease by exactly -1 | Pass |  | V2 |
+| BB-13 | Game Over |  | remain life is 0 | shown Game Over on canvas; shown score in this round | Pass |  ||  
+|**Coliision & GameOver**||||||||
+| BB-14 | Collision with upper pipe | In active play | fly into the upper pipe section | life decrease by -1; jellyfish flash indicating hit pipe or boundary and pipe stop moving; jellyfish move back to starting position and pipe restart moving (wait 3-5 seconds) | Fail | No points were deducted when hitting the top of the pillar | V1 |
+| BB-14 | Collision with upper pipe | In active play | fly into the upper pipe section | life decrease by -1; jellyfish flash indicating hit pipe or boundary and pipe stop moving; jellyfish move back to starting position and pipe restart moving (wait 3-5 seconds) | Pass |  | V2 |
+| BB-15 | Collision with lower pipe | In active play | fly into the lower pipe section | life decrease by -1; jellyfish flash indicating hit pipe or boundary and pipe stop moving; jellyfish move back to starting position and pipe restart moving (wait 3-5 seconds) | Fail | Points will be deducted when the bottom of the vehicle does not hit the pillar | V1 |
+| BB-15 | Collision with lower pipe | In active play | fly into the lower pipe section | life decrease by -1; jellyfish flash indicating hit pipe or boundary and pipe stop moving; jellyfish move back to starting position and pipe restart moving (wait 3-5 seconds) | Pass |  | V2 |
+| BB-16(a) | Collision boundary(up) | In active play | fly into the boundary | life decrease by -1; jellyfish flash indicating hit pipe or boundary and pipe stop moving; jellyfish move back to starting position and pipe restart moving(wait 3-5 seconds) | Pass |  | V1 |
+| BB-16(b) | Collision boundary(down) | In active play | fly into the boundary | life decrease by -1; jellyfish flash indicating hit pipe or boundary and pipe stop moving; jellyfish move back to starting position and pipe restart moving(wait 3-5 seconds) | Fail | hit the pole but didn't lose any points | V1 |
+| BB-16(b) | Collision boundary(down) | In active play | fly into the boundary | life decrease by -1; jellyfish flash indicating hit pipe or boundary and pipe stop moving; jellyfish move back to starting position and pipe restart moving(wait 3-5 seconds) | Pass |  | V2 |
+| BB-17 | Game Over Freezes Game Play | Game over triggered | Game over triggered | Shonw "Game Over" on canvas, shown score on canvas, return to main page after click | Fail | game over without screen notice | V1 |
+| BB-17 | Game Over Freezes Game Play | Game over triggered | Game over triggered | Shonw "Game Over" on canvas, shown score on canvas, return to main page after click | Pass |  | V2 |
+|**Reset/Restart**||||||||
+| BB-18 | Restart after game over | game open correctly | remain life is 0 | shown Game Over on canvas; shown score in this round | Fail | game over without screen notice | V1 | 
+| BB-18 | Restart after game over | game open correctly | remain life is 0 | shown Game Over on canvas; shown score in this round | Pass |  | V2 | 
+| BB-19 | Restart in active play| game open correctly | remain life is 0 | shown Game Over on canvas; shown score in this round | Fail | no this function | V1 |
+| BB-19 | Restart in active play| game open correctly | remain life is 0 | shown Game Over on canvas; shown score in this round | Pass |  | V2 |
+
+
+
+### WhiteBox Test
+
+| Test ID | Feature | Precondition | Step | Expected | Actual | Note | Version |
+|---------|---------|--------------|------|----------|--------|------|---------|
+|**runGameLogic**||||||||
+|WB-01| Game Started == false | game state is playing, game started is false, jellyfish object exist | call runGameLogic | the function should return early and only jellyfish exist | Pass | | V1 |
+|WB-02| DashTimer > 0 | game state is playing, game started is true | call runGameLogic | DashTimer should decrease by 1, jellyfish velocity should reset | Pass | | V1 |
+|WB-03| featherTimer > 0 | game started is true, game is in normal mode | call runGameLogic | featherTimer should decrease by 1, gravity should be reduce to 40% | Pass | | V1 | 
+|WB-04| Offscreen jellyfish | game is playing, game started is true, game is in normal mode, Offscreen() == true | call runGameLogic | handleCollision(-1) should be triggerd, reducing lifes, recording death | Pass | | V1 |
+|WB-05| Pass pipe is in chaos mode | score is 2, game state is playing, game started is true, current mode is chaos | call runGameLogic | the score should be increased, total pipe increase, sound play, gravity should be flipped when the score multiple of 3 | Pass | | V1 |
+|WB-06| item pick up and removal | game state is playing, game started is true, one nearby dash item is vising collection dash | call runGameLogic | the item should be collected, remove from array, applyEffect() should active the dashTimer | Pass | | V1 |
+|**applyEffect**||||||||
+|WB-07| shield | player has one life remain, item counter start from 0 | call applyEffect('shield') | life counter increased by 1, item counter increase by 1, screen display "actual life", virable 16 unlock | Fail | screen not update | V1 |
+|WB-07| shield | player has one life remain, item counter start from 0 | call applyEffect('shield') | life counter increased by 1, item counter increase by 1, screen display "actual life", virable 16 unlock | Pass |  | V2 |
+|WB-08| dash | no other effects apply | call applyEffect('dash') | dashTimer should be changed 180, screen show dashTimer active | Fail | fail to diaplay dash active | V1 |
+|WB-08| dash | no other effects apply | call applyEffect('dash') | dashTimer should be changed 180, screen show dashTimer active | Pass |  | V2 |
+|WB-09| feather | no other effects active | call applyEffect('feather') | featherTime change to 300, life show lightaway | Pass | | V1 |
+|**handleCollision**||||||||
+|WB-10| live <= 0 | player is on the last life, the game is playing, the score is higher than the highest score | call handleCollision | the game should be end, high score should be updated, the game should return to the menu | Pass |  | V1|
+|WB-11| live > 0 | player has more than one life, the pipe collision happen | call handleCollision | one life should be removed, the pipe should be removed, game play should continue | Pass |  | V1 |
 
