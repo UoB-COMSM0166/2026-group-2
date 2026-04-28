@@ -1007,28 +1007,165 @@ In writing this project report, we used GPT as an auxiliary tool. Specifically, 
 
 
 
-| BB-12 | Score unchange after not pissing a pipe | score is visible and known | not pass pipe | Score unchange; life decrease by exactly -1 | Fail | score not very visiable | V1 |
-| BB-12 | Score unchange after not pissing a pipe | score is visible and known | not pass pipe | Score unchange; life decrease by exactly -1 | Pass |  | V2 |
-| BB-13 | Game Over |  | remain life is 0 | shown Game Over on canvas; shown score in this round | Pass |  ||  
-|**Coliision & GameOver**||||||||
-| BB-14 | Collision with upper pipe | In active play | fly into the upper pipe section | life decrease by -1; jellyfish flash indicating hit pipe or boundary and pipe stop moving; jellyfish move back to starting position and pipe restart moving (wait 3-5 seconds) | Fail | No points were deducted when hitting the top of the pillar | V1 |
-| BB-14 | Collision with upper pipe | In active play | fly into the upper pipe section | life decrease by -1; jellyfish flash indicating hit pipe or boundary and pipe stop moving; jellyfish move back to starting position and pipe restart moving (wait 3-5 seconds) | Pass |  | V2 |
-| BB-15 | Collision with lower pipe | In active play | fly into the lower pipe section | life decrease by -1; jellyfish flash indicating hit pipe or boundary and pipe stop moving; jellyfish move back to starting position and pipe restart moving (wait 3-5 seconds) | Fail | Points will be deducted when the bottom of the vehicle does not hit the pillar | V1 |
-| BB-15 | Collision with lower pipe | In active play | fly into the lower pipe section | life decrease by -1; jellyfish flash indicating hit pipe or boundary and pipe stop moving; jellyfish move back to starting position and pipe restart moving (wait 3-5 seconds) | Pass |  | V2 |
-| BB-16(a) | Collision boundary(up) | In active play | fly into the boundary | life decrease by -1; jellyfish flash indicating hit pipe or boundary and pipe stop moving; jellyfish move back to starting position and pipe restart moving(wait 3-5 seconds) | Pass |  | V1 |
-| BB-16(b) | Collision boundary(down) | In active play | fly into the boundary | life decrease by -1; jellyfish flash indicating hit pipe or boundary and pipe stop moving; jellyfish move back to starting position and pipe restart moving(wait 3-5 seconds) | Fail | hit the pole but didn't lose any points | V1 |
-| BB-16(b) | Collision boundary(down) | In active play | fly into the boundary | life decrease by -1; jellyfish flash indicating hit pipe or boundary and pipe stop moving; jellyfish move back to starting position and pipe restart moving(wait 3-5 seconds) | Pass |  | V2 |
-| BB-17 | Game Over Freezes Game Play | Game over triggered | Game over triggered | Shonw "Game Over" on canvas, shown score on canvas, return to main page after click | Fail | game over without screen notice | V1 |
-| BB-17 | Game Over Freezes Game Play | Game over triggered | Game over triggered | Shonw "Game Over" on canvas, shown score on canvas, return to main page after click | Pass |  | V2 |
-|**Reset/Restart**||||||||
-| BB-18 | Restart after game over | game open correctly | remain life is 0 | shown Game Over on canvas; shown score in this round | Fail | game over without screen notice | V1 | 
-| BB-18 | Restart after game over | game open correctly | remain life is 0 | shown Game Over on canvas; shown score in this round | Pass |  | V2 | 
-| BB-19 | Restart in active play| game open correctly | remain life is 0 | shown Game Over on canvas; shown score in this round | Fail | no this function | V1 |
-| BB-19 | Restart in active play| game open correctly | remain life is 0 | shown Game Over on canvas; shown score in this round | Pass |  | V2 |
+
 
 
 
 ### WhiteBox Test
+
+
+<table>
+  <tr>
+    <th width="60"> Test ID </th>
+    <th width="80"> Feature </th>
+    <th width="80"> Precondition </th>
+    <th width="80"> Step </th>
+    <th width="240"> Expected </th>
+    <th width="80"> Actual </th>
+    <th width="80"> Note </th>
+    <th width="40"> Vesion </th>
+  </tr>
+   <tr>
+    <td colspan="8"><b>runGameLogic</b></td>
+  </tr>
+  <tr>
+    <td><b>WB-01</b></td>
+    <td>Game Started == false</td>
+    <td>game state is playing, game started is false, jellyfish object exist</td>
+    <td>call runGameLogic</td>
+    <td>the function should return early and only jellyfish exist</td>
+    <td>Pass</td>
+    <td> </td>
+    <td>V1</td>
+  </tr>  
+   <tr>
+    <td><b>WB-02</b></td>
+    <td>DashTimer > 0</td>
+    <td>game state is playing, game started is true</td>
+    <td>call runGameLogic</td>
+    <td>DashTimer should decrease by 1, jellyfish velocity should reset</td>
+    <td>Pass</td>
+    <td> </td>
+    <td>V1</td>
+  </tr>  
+  <tr>
+    <td><b>WB-03</b></td>
+    <td>featherTimer > 0</td>
+    <td>game started is true, game is in normal mode</td>
+    <td>call runGameLogic</td>
+    <td>eatherTimer should decrease by 1, gravity should be reduce to 40%</td>
+    <td>Pass</td>
+    <td> </td>
+    <td>V1</td>
+  </tr>  
+  <tr>
+    <td><b>WB-04</b></td>
+    <td>Offscreen jellyfish</td>
+    <td>game is playing, game started is true, game is in normal mode, Offscreen() == true </td>
+    <td>call runGameLogic</td>
+    <td>handleCollision(-1) should be triggerd, reducing lifes, recording death</td>
+    <td>Pass</td>
+    <td> </td>
+    <td>V1</td>
+  </tr>  
+  <tr>
+    <td><b>WB-05</b></td>
+    <td>Pass pipe is in chaos mode</td>
+    <td>score is 2, game state is playing, game started is true, current mode is chaos </td>
+    <td>call runGameLogic</td>
+    <td>the score should be increased, total pipe increase, sound play, gravity should be flipped when the score multiple of 3</td>
+    <td>Pass</td>
+    <td> </td>
+    <td>V1</td>
+  </tr>  
+  <tr>
+    <td><b>WB-06</b></td>
+    <td>item pick up and removal</td>
+    <td> game state is playing, game started is true, one nearby dash item is vising collection dash</td>
+    <td>call runGameLogic</td>
+    <td>the item should be collected, remove from array, applyEffect() should active the dashTimer</td>
+    <td>Pass</td>
+    <td> </td>
+    <td>V1</td>
+  </tr>  
+  <tr>
+    <td colspan="8"><b>applyEffect</b></td>
+  </tr>
+  <tr>
+    <td><b>WB-07</b></td>
+    <td>shield</td>
+    <td> player has one life remain, item counter start from 0</td>
+    <td>call applyEffect('shield')</td>
+    <td>life counter increased by 1, item counter increase by 1, screen display "actual life", virable 16 unlock</td>
+    <td>Fail</td>
+    <td>screen not update</td>
+    <td>V1</td>
+  </tr>  
+  <tr>
+    <td><b>WB-07</b></td>
+    <td>shield</td>
+    <td> player has one life remain, item counter start from 0</td>
+    <td>call applyEffect('shield')</td>
+    <td>life counter increased by 1, item counter increase by 1, screen display "actual life", virable 16 unlock</td>
+    <td>Pass</td>
+    <td> </td>
+    <td>V2</td>
+  </tr> 
+   <tr>
+    <td><b>WB-08</b></td>
+    <td>dash</td>
+    <td> no other effects apply</td>
+    <td>call applyEffect('dash')</td>
+    <td>dashTimer should be changed 180, screen show dashTimer active</td>
+    <td>Fail</td>
+    <td>fail to diaplay dash active </td>
+    <td>V1</td>
+  </tr> 
+   <tr>
+    <td><b>WB-08</b></td>
+    <td>dash</td>
+    <td> no other effects apply</td>
+    <td>call applyEffect('dash')</td>
+    <td>dashTimer should be changed 180, screen show dashTimer active</td>
+    <td>Pass</td>
+    <td> </td>
+    <td>V2</td>
+  </tr> 
+   <tr>
+    <td><b>WB-09</b></td>
+    <td>feather</td>
+    <td> no other effects active</td>
+    <td>call applyEffect('feather')</td>
+    <td>featherTime change to 300, life show lightaway</td>
+    <td>Pass</td>
+    <td> </td>
+    <td>V1</td>
+  </tr> 
+   <tr>
+    <td colspan="8"><b>handleCollision</b></td>
+  </tr>
+   <tr>
+    <td><b>WB-10</b></td>
+    <td>live <= 0</td>
+    <td>player is on the last life, the game is playing, the score is higher than the highest score</td>
+    <td>call handleCollision</td>
+    <td>the game should be end, high score should be updated, the game should return to the menu</td>
+    <td>Pass</td>
+    <td> </td>
+    <td>V1</td>
+  </tr> 
+   <tr>
+    <td><b>WB-11</b></td>
+    <td>live > 0 </td>
+    <td>player has more than one life, the pipe collision happen</td>
+    <td>call handleCollision</td>
+    <td>one life should be removed, the pipe should be removed, game play should continue</td>
+    <td>Pass</td>
+    <td> </td>
+    <td>V1</td>
+  </tr> 
+
+
 
 | Test ID | Feature | Precondition | Step | Expected | Actual | Note | Version |
 |---------|---------|--------------|------|----------|--------|------|---------|
