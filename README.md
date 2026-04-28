@@ -545,22 +545,6 @@ White-box testing focuses on the internal logic of the most important gameplay f
 
 
 
-<p align="center">
-  <strong>Table 7</strong><br>
-</p>
-
-
-
-
-### WhiteBox Test
-
-<p align="center">
-  <strong>Table 8</strong><br>
-</p>
-
-
-
-
 
 
 
@@ -715,39 +699,314 @@ In writing this project report, we used GPT as an auxiliary tool. Specifically, 
   </tr>
   <tr>
     <td><b>BB-02</b></td>
-    <td>Lauch</td>
-    <td>Server running</td>
-    <td>Open http://localhost:3000(run local hoster)</td>
-    <td>Game screen loads (background, birds, music), no console errors</td>
-    <td> </td>
-    <td>Pass</td>
+    <td>Reload behavior</td>
+    <td>game is running</td>
+    <td>refresh the page</td>
+    <td>game return to the initial state (score reset)</td>
+    <td>Fail</td>
+    <td>score does not reset</td>
     <td>V1</td>
+  </tr>  
+  <tr>
+    <td><b>BB-02</b></td>
+    <td>Reload behavior</td>
+    <td>game is running</td>
+    <td>refresh the page</td>
+    <td>game return to the initial state (score reset)</td>
+    <td>Pass</td>
+    <td> </td>
+    <td>V2</td>
+  </tr>  
+  <tr>
+    <td colspan="8"><b>Mode/Restart</b></td>
+  </tr>
+  <tr>
+    <td><b>BB-03</b></td>
+    <td>Normal mode on launch</td>
+    <td>page loaded</td>
+    <td>click normal mode</td>
+    <td>normal is shown with corret background, and jellyfish, and music</td>
+    <td>Pass</td>
+    <td> </td>
+    <td>V1</td>
+  </tr>  
+  <tr>
+    <td><b>BB-04</b></td>
+    <td>Return to main page</td>
+    <td>any mode is loaded</td>
+    <td>click "home"</td>
+    <td>return to main page, game screen loads</td>
+    <td>Fail</td>
+    <td>function not availble</td>
+    <td>V1</td>
+  </tr>  
+  <tr>
+    <td><b>BB-04</b></td>
+    <td>Return to main page</td>
+    <td>any mode is loaded</td>
+    <td>click "home"</td>
+    <td>return to main page, game screen loads</td>
+    <td>Pass</td>
+    <td> </td>
+    <td>V2</td>
+  </tr>  
+  <tr>
+    <td><b>BB-05</b></td>
+    <td>Normal mode play</td>
+    <td>Normal mode loaded</td>
+    <td>click to start</td>
+    <td>correct gravity assigned, wall generated, wall correctly moving towards jellyfish; background music</td>
+    <td>Pass</td>
+    <td> </td>
+    <td>V1</td>
+  </tr>  
+  <tr>
+    <td><b>BB-06</b></td>
+    <td>Game Over</td>
+    <td>remain chance equal to 0</td>
+    <td>Trigger Game Over</td>
+    <td>Game restarts; score resets</td>
+    <td>Pass</td>
+    <td> </td>
+    <td>V1</td>
+  </tr>  
+  <tr>
+    <td colspan="8"><b>Input Controls</b></td>
+  </tr>
+  <tr>
+    <td><b>BB-07</b></td>
+    <td>Mouse click flap</td>
+    <td>game running in active play state</td>
+    <td>click inside the game canvas once</td>
+    <td>jellyfish flaps upward immediately</td>
+    <td>Pass</td>
+    <td> </td>
+    <td>V1</td>
+  </tr>  
+  <tr>
+    <td><b>BB-08</b></td>
+    <td>Space key flap</td>
+    <td>game running in active play state</td>
+    <td>press space once</td>
+    <td>jellyfish flaps upward immediately</td>
+    <td>Fail</td>
+    <td>no function</td>
+    <td>V1</td>
+  </tr>  
+  <tr>
+    <td><b>BB-09</b></td>
+    <td>Rapid click</td>
+    <td>game running in active play state</td>
+    <td>click rapidly 10+ times</td>
+    <td>No freeze/crash; jellyfish movement remain consistent; game continues to respond</td>
+    <td>Pass</td>
+    <td> </td>
+    <td>V1</td>
+  </tr>  
+  <tr>
+    <td><b>BB-10</b></td>
+    <td>Input ignored</td>
+    <td>game running in active play state</td>
+    <td>do nothing</td>
+    <td>Jellyfish falls</td>
+    <td>Pass</td>
+    <td> </td>
+    <td>V1</td>
+  </tr>  
+  <tr>
+    <td colspan="8"><b>Scoring</b></td>
+  </tr>
+  <tr>
+    <td><b>BB-11</b></td>
+    <td>Score increase after pissing a pipe</td>
+    <td>score is visible and known</td>
+    <td>pass one pipe successfully</td>
+    <td>Score increases by exactly +1</td>
+    <td>Fail</td>
+    <td>score not very visiable</td>
+    <td>V1</td>
+  </tr>  
+  <tr>
+    <td><b>BB-11</b></td>
+    <td>Score increase after pissing a pipe</td>
+    <td>score is visible and known</td>
+    <td>pass one pipe successfully</td>
+    <td>Score increases by exactly +1</td>
+    <td>Pass</td>
+    <td> </td>
+    <td>V2</td>
+  </tr>  
+  <tr>
+    <td><b>BB-12</b></td>
+    <td>Score unchange after not pissing a pipe</td>
+    <td>score is visible and known</td>
+    <td>not pass pipe</td>
+    <td>Score unchange; life decrease by exactly -1</td>
+    <td>Fail</td>
+    <td>score not very visiable</td>
+    <td>V1</td>
+  </tr>  
+  <tr>
+    <td><b>BB-12</b></td>
+    <td>Score unchange after not pissing a pipe</td>
+    <td>score is visible and known</td>
+    <td>not pass pipe</td>
+    <td>Score unchange; life decrease by exactly -1</td>
+    <td>Pass</td>
+    <td> </td>
+    <td>V2</td>
+  </tr>  
+  <tr>
+    <td><b>BB-13</b></td>
+    <td>Game Over</td>
+    <td> </td>
+    <td>remain life is 0</td>
+    <td>shown Game Over on canvas; shown score in this round</td>
+    <td>Pass</td>
+    <td> </td>
+    <td>V1</td>
+  </tr>  
+  <tr>
+    <td colspan="8"><b>Coliision & GameOver</b></td>
+  </tr>
+  <tr>
+    <td><b>BB-14</b></td>
+    <td>Collision with upper pipe</td>
+    <td>In active play</td>
+    <td>fly into the upper pipe section</td>
+    <td>life decrease by -1; jellyfish flash indicating hit pipe or boundary and pipe stop moving; jellyfish move back to starting position and pipe restart moving (wait 3-5 seconds)</td>
+    <td>Fail</td>
+    <td>No points were deducted when hitting the top of the pillar</td>
+    <td>V1</td>
+  </tr>  
+  <tr>
+    <td><b>BB-14</b></td>
+    <td>Collision with upper pipe</td>
+    <td>In active play</td>
+    <td>fly into the upper pipe section</td>
+    <td>life decrease by -1; jellyfish flash indicating hit pipe or boundary and pipe stop moving; jellyfish move back to starting position and pipe restart moving (wait 3-5 seconds)</td>
+    <td>Pass</td>
+    <td> </td>
+    <td>V2</td>
+  </tr>  
+  <tr>
+    <td><b>BB-15</b></td>
+    <td>Collision with lower pipe</td>
+    <td>In active play</td>
+    <td>fly into the lower pipe section</td>
+    <td>life decrease by -1; jellyfish flash indicating hit pipe or boundary and pipe stop moving; jellyfish move back to starting position and pipe restart moving (wait 3-5 seconds)</td>
+    <td>Fail</td>
+    <td>Points will be deducted when the bottom of the vehicle does not hit the pillar</td>
+    <td>V1</td>
+  </tr>  
+  <tr>
+    <td><b>BB-15</b></td>
+    <td>Collision with lower pipe</td>
+    <td>In active play</td>
+    <td>fly into the lower pipe section</td>
+    <td>life decrease by -1; jellyfish flash indicating hit pipe or boundary and pipe stop moving; jellyfish move back to starting position and pipe restart moving (wait 3-5 seconds)</td>
+    <td>Pass</td>
+    <td> </td>
+    <td>V2</td>
+  </tr>  
+  <tr>
+    <td><b>BB-16(a)</b></td>
+    <td>Collision boundary(up)</td>
+    <td>In active play</td>
+    <td>fly into the boundary</td>
+    <td>life decrease by -1; jellyfish flash indicating hit pipe or boundary and pipe stop moving; jellyfish move back to starting position and pipe restart moving(wait 3-5 seconds)</td>
+    <td>Pass</td>
+    <td> </td>
+    <td>V1</td>
+  </tr>  
+  <tr>
+    <td><b>BB-16(b)</b></td>
+    <td>Collision boundary(down)</td>
+    <td>In active play</td>
+    <td>fly into the boundary</td>
+    <td>life decrease by -1; jellyfish flash indicating hit pipe or boundary and pipe stop moving; jellyfish move back to starting position and pipe restart moving(wait 3-5 seconds)</td>
+    <td>Fail</td>
+    <td>hit the pole but didn't lose any points</td>
+    <td>V1</td>
+  </tr>  
+  <tr>
+    <td><b>BB-16(b)</b></td>
+    <td>Collision boundary(down)</td>
+    <td>In active play</td>
+    <td>fly into the boundary</td>
+    <td>life decrease by -1; jellyfish flash indicating hit pipe or boundary and pipe stop moving; jellyfish move back to starting position and pipe restart moving(wait 3-5 seconds)</td>
+    <td>Pass</td>
+    <td> </td>
+    <td>V2</td>
+  </tr>  
+  <tr>
+    <td><b>BB-17</b></td>
+    <td>Game Over Freezes Game Play</td>
+    <td>Game over triggered</td>
+    <td>Game over triggered</td>
+    <td>Shonw "Game Over" on canvas, shown score on canvas, return to main page after click</td>
+    <td>Fail</td>
+    <td>game over without screen notice</td>
+    <td>V1</td>
+  </tr>  
+  <tr>
+    <td><b>BB-17</b></td>
+    <td>Game Over Freezes Game Play</td>
+    <td>Game over triggered</td>
+    <td>Game over triggered</td>
+    <td>Shonw "Game Over" on canvas, shown score on canvas, return to main page after click</td>
+    <td>Pass</td>
+    <td> </td>
+    <td>V2</td>
+  </tr>  
+   <tr>
+    <td colspan="8"><b>Reset/Restart</b></td>
+  </tr>
+  <tr>
+    <td><b>BB-18</b></td>
+    <td>Restart after game over</td>
+    <td>game open correctly</td>
+    <td>remain life is 0</td>
+    <td>shown Game Over on canvas; shown score in this round</td>
+    <td>Fail</td>
+    <td>game over without screen notice</td>
+    <td>V1</td>
+  </tr>  
+  <tr>
+    <td><b>BB-18</b></td>
+    <td>Restart after game over</td>
+    <td>game open correctly</td>
+    <td>remain life is 0</td>
+    <td>shown Game Over on canvas; shown score in this round</td>
+    <td>Pass</td>
+    <td> </td>
+    <td>V2</td>
+  </tr>  
+  <tr>
+    <td><b>BB-19</b></td>
+    <td>Restart in active play</td>
+    <td>game open correctly</td>
+    <td>remain life is 0</td>
+    <td>shown Game Over on canvas; shown score in this round</td>
+    <td>Fail</td>
+    <td>no this function</td>
+    <td>V1</td>
+  </tr>  
+  <tr>
+    <td><b>BB-19</b></td>
+    <td>Restart in active play</td>
+    <td>game open correctly</td>
+    <td>remain life is 0</td>
+    <td>shown Game Over on canvas; shown score in this round</td>
+    <td>Pass</td>
+    <td> </td>
+    <td>V2</td>
   </tr>  
 </table>
 
 
-### BlackBox Test
 
-| Test ID | Feature | Precondition | Step | Expected | Actual | Note | Vesion |
-|---------|---------|--------------|------|----------|--------|------|--------|
-|**Launch & Entry**||||||||
-| BB-01 | Lauch | Server running | Open http://localhost:3000(run local hoster) | Game screen loads (background, birds, music), no console errors | Pass | | V1 |
-| BB-02 | Reload behavior | game is running | refresh the page | game return to the initial state (score reset) | Fail | score does not reset | V1 |
-| BB-02 | Reload behavior | game is running | refresh the page | game return to the initial state (score reset) | Pass | score does not reset | V2 |
-|**Mode/Restart**||||||||
-| BB-03 | Normal mode on launch | page loaded | click normal mode | normal is shown with corret background, and jellyfish, and music | Pass |  | V1 |
-| BB-04 | Return to main page | any mode is loaded | click "home" | return to main page, game screen loads | Fail | function not availble | V1 |
-| BB-04 | Return to main page | any mode is loaded | click "home" | return to main page, game screen loads | Pass | function not availble | V2 |
-| BB-05 | Normal mode play | Normal mode loaded | click to start | correct gravity assigned, wall generated, wall correctly moving towards jellyfish; background music | Pass |  | V1 |
-| BB-06 | Game Over | remain chance equal to 0 | Trigger Game Over | Game restarts; score resets | Pass |  | V1 |
-|**Input Controls**||||||||
-| BB-07 | Mouse click flap | game running in active play state | click inside the game canvas once | jellyfish flaps upward immediately | Pass |  | V1 |
-| BB-08 | Space key flap | game running in active play state | press space onece | jellyfish flaps upward immediately | Fail | no function | V1 |
-| BB-09 | Rapid click | game running in active play state | click rapidly 10+ times | No freeze/crash; jellyfish movement remain consistent; game continues to respond | Pass |  | V1 |
-| BB-10 | Input ignored | game running in active play state | do nothing | Jellyfish falls | Pass |  | V1 |
-|**Scoring**||||||||
-| BB-11 | Score increase after pissing a pipe | score is visible and known | pass one pipe successfully | Score increases by exactly +1 | Fail | score not very visiable | V1 |
-| BB-11 | Score increase after pissing a pipe | score is visible and known | pass one pipe successfully | Score increases by exactly +1 | Pass |  | V2 |
+
 | BB-12 | Score unchange after not pissing a pipe | score is visible and known | not pass pipe | Score unchange; life decrease by exactly -1 | Fail | score not very visiable | V1 |
 | BB-12 | Score unchange after not pissing a pipe | score is visible and known | not pass pipe | Score unchange; life decrease by exactly -1 | Pass |  | V2 |
 | BB-13 | Game Over |  | remain life is 0 | shown Game Over on canvas; shown score in this round | Pass |  ||  
