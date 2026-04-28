@@ -612,9 +612,12 @@ White-box testing focuses on the internal logic of the most important gameplay f
 
 # 7.Process 
 
-- 15% ~750 words
+## (1) Teamwork
+We held regular in-person group meetings each week. When members could not attend face-to-face sessions, remote discussions took place through Tencent Meeting instead.
 
-- Teamwork. How did you work together, what tools and methods did you use? Did you define team roles? Reflection on how you worked together. Be honest, we want to hear about what didn't work as well as what did work, and importantly how your team adapted throughout the project.
+During class, we used guided workshop time and group discussion sessions to share ideas about game design, development plans and technical issues. After class, we held additional group meetings to consolidate ideas shared in class, organise our overall progress, and set clear tasks for the week ahead. Roles were defined early in the project. Some members focused on programming and testing to develop functional game features, while others concentrated on writing and organising project documentation to keep all written work clear and well-structured.
+
+
 
 # 8.Sustainability, ethics and accessibility
 
