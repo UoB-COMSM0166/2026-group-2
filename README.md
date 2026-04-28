@@ -310,9 +310,12 @@ In the following section, we explain how these three technical challenges were i
 ## (1) Gravity-based gameplay challenge
 
 Our game introduces an innovative gravity-based gameplay mechanic, extending the traditional single-gravity system into multiple physics modes, including standard gravity and a buoyancy-like reverse gravity.
+
 Instead of keeping the character's movement fixed throughout the game, we designed a level configuration system in which each mode is defined by different physical parameters, such as gravity and lift. This allows the game to create clearly different interactive experiences across modes.
 In particular, the reverse gravity mode applies negative gravity values and an opposite lift direction, creating a buoyancy effect that changes the way players control the character.
 From a technical perspective, this feature is implemented through parameterised level design and dynamic updates to the gravity direction at runtime.
+
+To support the development and refinement of these mechanics, we implemented a debug mode that can be toggled on and off during runtime. This mode provides tools to improve testing efficiency and gameplay balancing, including hit box visualisation for verifying collision detection, a slowdown function for analysing movement and timing, and real-time parameter monitoring of key variables such as gravity, velocity, and collision states. It also includes a pause function, allowing the game state to be frozen for closer inspection. Together, these features improved debugging accuracy and ensured the gravity system behaved consistently across different modes.
 
 <p align="center">
   <strong>Figure 7</strong><br>
@@ -338,8 +341,11 @@ From a technical perspective, this feature is implemented through parameterised 
 ## (2) Item System challenge
 
 Another key innovation in our game is the introduction of a three-item system, designed to enrich gameplay variety beyond the basic obstacle-avoidance mechanic.
+
 Unlike manually activated abilities, these items are randomly distributed between obstacles during gameplay. Once the player-controlled character touches an item, its effect is triggered immediately. This design makes item collection a dynamic part of the movement and avoidance process, requiring players to react in real time while navigating through the level.
+
 The three items provide different gameplay effects. The shield item increases the player’s life value, improving survivability after collisions. The dash item temporarily boosts movement speed, removes the effect of gravity, and creates a short invincible state, allowing the character to pass through obstacles safely for a limited time. The feather item reduces the influence of gravity and lift, creating a floating effect that makes character movement smoother and easier to control.
+
 From a design perspective, this item system increases unpredictability and moment-to-moment variation in gameplay, as players may encounter different item effects at different positions in each run. From a technical perspective, the feature is implemented through a centralised effect-handling function and timer-based status updates, allowing item effects to be triggered instantly on contact and maintained for a controlled duration during runtime.
 
 <p align="center">
