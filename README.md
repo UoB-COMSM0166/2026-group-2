@@ -42,7 +42,7 @@
 
 
 
-# 1.Our Team
+# 1. Our Team
 
 <p align="center">
   <strong>Figure 1</strong><br>
