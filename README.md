@@ -93,7 +93,7 @@
 
 
 
-# 2.Introduction
+# 2. Introduction
 
 
 Our game is a casual arcade game inspired by Flappy Bird and Thunder Fighter. It combines the simple one-tap control of Flappy Bird with the variety of game modes and item-based gameplay often seen in Thunder Fighter. In the game, the player controls a jellyfish and must avoid obstacles while surviving as long as possible and achieving a higher score. The core design idea is to make the game easy to understand, quick to start, and enjoyable for a wide range of players.
@@ -130,7 +130,7 @@ What makes our game novel is the combination of dynamic gravity changes, multipl
   </tr>
 </table>
 
-# 3.Requirements 
+# 3. Requirements 
 
 ## (1) Ideation process
 
@@ -230,7 +230,7 @@ The diagram shows that the player can Start Game and Play Game as the two primar
 
 
 
-# 4.Design
+# 4. Design
 
 ## (1) System Architecture
 
@@ -295,7 +295,7 @@ Based on the final game design, the sequence begins when the player starts the g
 When developing our game, we followed an iterative process in which the sequence diagram was regularly updated alongside the source code. As new mechanics such as lives, items, and achievements were added, the diagram helped us maintain a clear overview of object responsibilities and interaction flow. This ensured that new features could be integrated consistently while reducing logic errors during development.
 
 
-# 5.Implementation
+# 5. Implementation
 
 
 To develop our game, we focused on creating a system that was easy to understand and simple to control, while still offering enough variation to keep players engaged. During the design and implementation process, we identified three main technical challenges that were central to the gameplay experience.
@@ -393,7 +393,7 @@ Our third innovation is the introduction of an Achievement Hall system, which ex
 
 
 
-# 6.Evaluation
+# 6. Evaluation
 
 The evaluation aimed to assess both the playability and the technical quality of JellyDrift. The evaluation is focused on four aspect: ease of learning, game playability,clarity of game feedback, and correctness of implementation. To achieve this, we combined qualitative user-based evaluation methods (NASA, SUS) with manual black-box and white-box testing. 
 
@@ -549,7 +549,7 @@ White-box testing focuses on the internal logic of the most important gameplay f
 
 
 
-# 7.Process 
+# 7. Process 
 
 ## (1) Teamwork
 We held regular in-person group meetings each week. When members could not attend face-to-face sessions, remote discussions took place through Tencent Meeting instead.
@@ -594,7 +594,7 @@ Throughout the project, the team faced a number of common collaborative challeng
 To resolve these issues, the team adopted practical adjustments to improve cooperation efficiency. We coordinated uploading time in advance to avoid simultaneous file editing, and strengthened mutual checking to reduce avoidable mistakes before submission. Weekly meetings helped clarify specific task requirements, standards and deadlines, while updated information on the Kanban board ensured everyone maintained the same understanding of ongoing work. We also analysed test feedback collected from Excel records and adjusted code details and game logic accordingly, which greatly improved operational smoothness and system stability. With these continuous improvements, team cooperation became more orderly and efficient, file conflicts decreased significantly, and task progression became more stable and coherent.
 
 
-# 8.Sustainability, ethics and accessibility
+# 8. Sustainability, ethics and accessibility
 
 ## (1) Environmental Impact
 
@@ -618,7 +618,7 @@ Jellydrift is developed using the open-source p5.js framework, supporting transp
 The project follows standard web development workflows to maintain consistent performance and stability across different platforms, creating a reliable experience for all users while upholding ethical and sustainable software design principles. This cross-platform consistency ensures players receive the same smooth, uniform gameplay experience regardless of the device they use, whether it be a desktop computer, tablet, or mobile device, effectively reducing compatibility issues and further reinforcing the game’s accessible and user-centric technical foundation.
 
 
-# 9.Conclusion
+# 9. Conclusion
 
 
 JellyDrift successfully developed from an early concept into a complete browser-based game that combines simple one-tap controls with more varied mechanics such as multiple gravity modes, collectible items, and an achievement system. Our original aim was to create a casual and stress-relieving game inspired by Flappy Bird, while adding greater replayability and progression. Based on the final outcome, we believe the project achieved this goal by balancing accessibility with challenge and introducing mechanics that make each run feel different.
@@ -663,13 +663,13 @@ As immediate next steps, we would improve feedback systems, add clearer game-ove
 </table>
 
 
-# 10.AI Statement
+# 10. AI Statement
 
 In writing this project report, we used GPT as an auxiliary tool. Specifically, GPT was used to improve the clarity, grammar, and overall structure of the article, help improve sentence fluency, simplify expression, and ensure consistency in academic terminology.
 
 
 
-# 11.Appendices
+# 11. Appendices
 
 
 ### BlackBox Test
