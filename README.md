@@ -427,11 +427,11 @@ Suggested improvements:
 </p>
 
 <p align="center">
-  <img src="images/menu_compare.png" alt="menu Diagram" width="600">
+  <img src="images/menu.png" alt="menu Diagram" width="600">
 </p>
 
 <p align="center">
-  <img src="images/Play_ready.png" alt="Play Diagram" width="600">
+  <img src="images/.png" alt="Play Diagram" width="600">
 </p>
 
 
