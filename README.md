@@ -431,7 +431,7 @@ Suggested improvements:
 </p>
 
 <p align="center">
-  <img src="images/.png" alt="Play Diagram" width="600">
+  <img src="images/Start_Game.png" alt="Play Diagram" width="600">
 </p>
 
 
