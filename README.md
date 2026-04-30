@@ -531,7 +531,7 @@ This testing process was particularly useful in identifying player-visible defec
   <em>Comparison of in-game displays</em>
 </p>
 
-<p>
+<p align="center">
     <img src="images/v2-demo.gif" width="50%" />
 </p>
 
