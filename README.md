@@ -674,7 +674,14 @@ As immediate next steps, we would improve feedback systems, add clearer game-ove
 
 # 10. AI Statement
 
-In writing this project report, we used GPT as an auxiliary tool. Specifically, GPT was used to improve the clarity, grammar, and overall structure of the article, help improve sentence fluency, simplify expression, and ensure consistency in academic terminology.
+Artificial Intelligence (AI) tools were used in a limited and supportive capacity during this project. First, AI was applied to refine and standardise the language of our report. As non-native English speakers, we used it to improve clarity, grammar, and academic tone, ensuring that our documentation is readable and consistent.
+
+Second, AI was used to suggest improvements to code structure. These suggestions mainly focused on organisation, readability, and modularisation (e.g., clearer method decomposition and naming conventions). All final implementations were reviewed, adapted, and fully understood by team members before integration.
+
+Third, during the early design phase, AI assisted with brainstorming and comparative analysis. It helped us explore different gameplay ideas and evaluate existing game mechanics (such as comparisons between Flappy Bird-style controls and shooting/upgrade systems). These outputs were used only as references to support our own design decisions.
+
+Fourth, AI provided suggestions related to UI and visual design. For example, it offered guidance on improving colour contrast between the jellyfish character and the background, as well as balancing brightness and visual hierarchy to enhance player experience.
+It is important to emphasise that AI was strictly used as an auxiliary tool. All core aspects of the project—including requirement analysis, system design decisions, implementation of key game mechanics, and testing—were independently completed and validated by the team.
 
 
 
