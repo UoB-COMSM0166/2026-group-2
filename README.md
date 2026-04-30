@@ -532,8 +532,7 @@ This testing process was particularly useful in identifying player-visible defec
 </p>
 
 <p>
-    <img src="images/v1-demo.gif" width="45%" />
-    <img src="images/v2-demo.gif" width="45%" />
+    <img src="images/v2-demo.gif" width="50%" />
 </p>
 
 
