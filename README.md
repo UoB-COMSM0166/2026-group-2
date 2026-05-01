@@ -114,9 +114,9 @@ What makes our game novel is the combination of dynamic gravity changes, multipl
     <th>Description</th>
   </tr>
   <tr>
-    <td>Star</td>
+    <td>Heart</td>
     <td>❤️</td>
-    <td>The star restores health.</td>
+    <td>The Heart restores health.</td>
   </tr>
   <tr>
     <td>Harpoon</td>
