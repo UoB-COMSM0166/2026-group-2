@@ -11,6 +11,10 @@
   <a href="https://uob-comsm0166.github.io/2026-group-2/">
     <b>🪼 Launch Game: Click here to play Jellydrift</b>
   </a>
+ <br>
+  <a href="https://www.youtube.com/watch?v=P-5Mj1ElRgM">
+    ▶️ Game Demo Video (YouTube)
+  </a>
 </p>
 
 
